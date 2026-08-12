@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "research": "Investigação",
+    "team": "Equipa",
+    "publications": "Publicações",
+    "contact": "Contacto",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "home": {
+    "eyebrow": "GIMM · Lisboa",
+    "headline": "Nuno Santos Lab",
+    "subhead": "Biomembranas e nanomedicina na interface entre células, patógenos e ferramentas moleculares para a saúde.",
+    "ctaResearch": "Explorar investigação",
+    "ctaContact": "Contactar",
+    "axesEyebrow": "Áreas de investigação",
+    "axesTitle": "O que estudamos",
+    "axesLead": "Dos mecanismos membranares de vírus envelopados e risco cardiovascular a péptidos antimicrobianos, biossensores, AFM e vigilância de vetores.",
+    "axesLink": "Toda a investigação e projetos",
+    "hubsEyebrow": "Plataformas especializadas",
+    "hubsTitle": "Hubs dedicados",
+    "hubsLead": "A rede de vigilância e o insectário terão sites dedicados — os links aparecerão aqui quando estiverem online.",
+    "visitSite": "Visitar site",
+    "comingSoon": "Site em breve",
+    "statsEyebrow": "Impacto",
+    "statsTitle": "Em números",
+    "teamEyebrow": "Pessoas",
+    "teamTitle": "A equipa",
+    "teamLead": "Investigadores, estudantes e staff em biomembranas, nanomedicina e biologia de vetores no GIMM.",
+    "teamLink": "Equipa completa",
+    "partnersEyebrow": "Rede",
+    "partnersTitle": "Afiliações e financiadores"
+  },
+  "research": {
+    "eyebrow": "Investigação",
+    "title": "Biomembranas e nanomedicina",
+    "lead": "Processos bioquímicos e biofísicos ao nível das membranas das células humanas e dos seus agentes patogénicos virais e bacterianos.",
+    "areasTitle": "Áreas de investigação",
+    "axesTitle": "Temas em foco",
+    "projectsTitle": "Projetos ativos",
+    "projectsLead": "Programas em curso financiados pela FCT, EU Horizon, Compete 2030 e consórcios internacionais.",
+    "previousTitle": "Projetos anteriores",
+    "awardsTitle": "Prémios"
+  },
+  "team": {
+    "eyebrow": "Equipa",
+    "title": "As pessoas por detrás da ciência",
+    "lead": "Membros do grupo conforme a página do Laboratório Nuno Santos no GIMM."
+  },
+  "publications": {
+    "eyebrow": "Publicações",
+    "title": "Publicações selecionadas",
+    "lead": "Publicações selecionadas do laboratório. Listas completas disponíveis na página do lab no GIMM e em repositórios institucionais.",
+    "viewDoi": "Ver DOI"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Fale connosco",
+    "lead": "Para colaborações, oportunidades para estudantes ou imprensa.",
+    "email": "Email",
+    "emailCta": "Enviar email",
+    "address": "Morada",
+    "affiliations": "Afiliações",
+    "gimmPage": "Página do lab no GIMM"
+  },
+  "footer": {
+    "tagline": "Biomembranas · Nanomedicina",
+    "rights": "Todos os direitos reservados."
+  }
+}

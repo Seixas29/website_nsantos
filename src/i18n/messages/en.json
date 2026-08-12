@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "research": "Research",
+    "team": "Team",
+    "publications": "Publications",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "home": {
+    "eyebrow": "GIMM · Lisbon",
+    "headline": "Nuno Santos Lab",
+    "subhead": "Biomembranes and nanomedicine at the interface of cells, pathogens, and molecular tools for health.",
+    "ctaResearch": "Explore research",
+    "ctaContact": "Get in touch",
+    "axesEyebrow": "Research areas",
+    "axesTitle": "What we study",
+    "axesLead": "From enveloped-virus membrane mechanisms and cardiovascular risk to antimicrobial peptides, biosensors, AFM, and vector surveillance.",
+    "axesLink": "All research & projects",
+    "hubsEyebrow": "Specialised hubs",
+    "hubsTitle": "Dedicated platforms",
+    "hubsLead": "Our surveillance network and insectary will have dedicated sites — links will appear here when they go live.",
+    "visitSite": "Visit site",
+    "comingSoon": "Site coming soon",
+    "statsEyebrow": "Impact",
+    "statsTitle": "By the numbers",
+    "teamEyebrow": "People",
+    "teamTitle": "Meet the team",
+    "teamLead": "Researchers, students and staff across biomembranes, nanomedicine and vector biology at GIMM.",
+    "teamLink": "Full team",
+    "partnersEyebrow": "Network",
+    "partnersTitle": "Affiliations & funders"
+  },
+  "research": {
+    "eyebrow": "Research",
+    "title": "Biomembranes & nanomedicine",
+    "lead": "Biochemical and biophysical processes at human cell membranes and their viral and bacterial pathogens.",
+    "areasTitle": "Research areas",
+    "axesTitle": "Focus themes",
+    "projectsTitle": "Active projects",
+    "projectsLead": "Ongoing programmes funded by FCT, EU Horizon, Compete 2030 and international consortia.",
+    "previousTitle": "Previous projects",
+    "awardsTitle": "Awards"
+  },
+  "team": {
+    "eyebrow": "Team",
+    "title": "The people behind the science",
+    "lead": "Group members listed on the GIMM Nuno Santos Laboratory page."
+  },
+  "publications": {
+    "eyebrow": "Publications",
+    "title": "Selected papers",
+    "lead": "Selected publications from the laboratory. Full lists are available via the GIMM lab page and institutional repositories.",
+    "viewDoi": "View DOI"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "lead": "For collaborations, student opportunities, or press enquiries.",
+    "email": "Email",
+    "emailCta": "Send email",
+    "address": "Address",
+    "affiliations": "Affiliations",
+    "gimmPage": "GIMM lab page"
+  },
+  "footer": {
+    "tagline": "Biomembranes · Nanomedicine",
+    "rights": "All rights reserved."
+  }
+}
