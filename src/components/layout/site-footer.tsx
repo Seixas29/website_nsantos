@@ -1,4 +1,5 @@
 import { GimmLogo } from "@/components/brand/gimm-logo";
+import { NsMark } from "@/components/brand/ns-mark";
 import { siteConfig } from "@/data/site";
 import type { Locale } from "@/i18n/config";
 import Link from "next/link";
@@ -16,7 +17,10 @@ export function SiteFooter({
     <footer className="mt-auto border-t border-line bg-mist/50">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-14 md:flex-row md:items-end md:justify-between">
         <div className="max-w-md">
-          <p className="font-display text-3xl text-ink">{siteConfig.name}</p>
+          <div className="flex items-center gap-3">
+            <NsMark width={40} height={40} className="h-10 w-10" />
+            <p className="font-display text-3xl text-ink">{siteConfig.name}</p>
+          </div>
           <p className="mt-2 text-sm text-ink/50">{tagline}</p>
           <p className="mt-6 text-sm leading-relaxed text-ink/40">
             {siteConfig.address[locale]}

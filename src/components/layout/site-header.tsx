@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { NsMark } from "@/components/brand/ns-mark";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { navLinks, siteConfig } from "@/data/site";
 import type { Locale } from "@/i18n/config";
@@ -88,11 +89,9 @@ export function SiteHeader({ locale }: { locale: Locale }) {
         >
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-2.5 rounded-full px-3 py-1.5 transition-opacity hover:opacity-80"
+            className="flex items-center gap-2.5 rounded-full px-2.5 py-1.5 transition-opacity hover:opacity-80"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-teal font-display text-[11px] tracking-wide text-white dark:text-paper">
-              NS
-            </span>
+            <NsMark width={32} height={32} priority className="h-8 w-8" />
             <span className="hidden font-display text-lg leading-none text-ink sm:block">
               {siteConfig.name}
             </span>
