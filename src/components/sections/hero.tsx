@@ -54,14 +54,14 @@ export function Hero({
             className="opacity-90 transition-opacity hover:opacity-100"
           >
             <GimmLogo
-              variant="horizontal"
-              width={168}
-              height={44}
+              variant="lockup"
+              width={200}
+              height={50}
               priority
               className="h-9 md:h-10"
             />
           </a>
-          <span className="hidden h-8 w-px bg-line sm:block" />
+          <span className="hidden h-8 w-px shrink-0 bg-line sm:block" />
           <p className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-ink/40 sm:block">
             {eyebrow}
           </p>

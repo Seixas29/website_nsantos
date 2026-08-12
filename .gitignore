@@ -43,3 +43,5 @@ next-env.d.ts
 # duplicate source assets (served from /public)
 /images/
 /team/
+
+.vercel

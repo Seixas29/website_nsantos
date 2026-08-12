@@ -10,6 +10,11 @@ const marks = {
     light: "/images/gimm_logo/GIMM_PRIMARY_HORIZONTAL_POS_RGB.png",
     dark: "/images/gimm_logo/GIMM_PRIMARY_HORIZONTAL_NEG_RGB.png",
   },
+  /** Symbol on the left + GIMM wordmark (cropped for clean hero use). */
+  lockup: {
+    light: "/images/gimm_logo/GIMM_LOCKUP_POS_RGB.png",
+    dark: "/images/gimm_logo/GIMM_LOCKUP_NEG_RGB.png",
+  },
 } as const;
 
 export function GimmLogo({
@@ -28,14 +33,14 @@ export function GimmLogo({
   const pair = marks[variant];
 
   return (
-    <span className={cn("relative inline-flex", className)}>
+    <span className={cn("relative inline-flex shrink-0 overflow-visible", className)}>
       <Image
         src={pair.light}
         alt="GIMM – Gulbenkian Institute for Molecular Medicine"
         width={width}
         height={height}
         priority={priority}
-        className="h-auto w-auto dark:hidden"
+        className="h-full w-auto max-w-none object-contain object-left dark:hidden"
       />
       <Image
         src={pair.dark}
@@ -43,7 +48,7 @@ export function GimmLogo({
         width={width}
         height={height}
         priority={priority}
-        className="hidden h-auto w-auto dark:block"
+        className="hidden h-full w-auto max-w-none object-contain object-left dark:block"
       />
     </span>
   );
