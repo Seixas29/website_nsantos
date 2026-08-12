@@ -91,7 +91,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             href={`/${locale}`}
             className="flex items-center gap-2.5 rounded-full px-2.5 py-1.5 transition-opacity hover:opacity-80"
           >
-            <NsMark width={32} height={32} priority className="h-8 w-8" />
+            <NsMark width={36} height={36} priority className="h-9 w-9" />
             <span className="hidden font-display text-lg leading-none text-ink sm:block">
               {siteConfig.name}
             </span>

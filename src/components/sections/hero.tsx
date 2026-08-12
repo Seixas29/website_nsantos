@@ -28,12 +28,12 @@ export function Hero({
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_70%_0%,var(--glow),transparent_55%)]" />
       <div className="pointer-events-none absolute -left-32 bottom-0 h-[40vh] w-[50vw] bg-[radial-gradient(circle,rgba(15,127,120,0.08),transparent_70%)] blur-2xl dark:bg-[radial-gradient(circle,rgba(61,184,174,0.1),transparent_70%)]" />
 
-      {/* Lab mark watermark — identity without competing with GIMM + headline */}
+      {/* Lab mark watermark — quiet but readable brand presence */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-[6%] top-[20%] hidden w-[min(48vw,440px)] select-none opacity-[0.09] dark:opacity-[0.14] lg:block"
+        className="pointer-events-none absolute -right-[4%] top-[18%] hidden w-[min(46vw,420px)] select-none opacity-[0.16] dark:opacity-[0.22] lg:block"
       >
-        <NsMark width={440} height={440} priority className="h-auto w-full" />
+        <NsMark width={420} height={420} priority className="h-auto w-full" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-6xl flex-col justify-center overflow-visible px-6 pb-20 pt-36 md:pb-24 md:pt-32">
