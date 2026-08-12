@@ -2,7 +2,6 @@
 
 import { GimmLogo } from "@/components/brand/gimm-logo";
 import { Button, ButtonIcon } from "@/components/ui/button";
-import { NumberTicker } from "@/components/ui/number-ticker";
 import type { Locale } from "@/i18n/config";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
@@ -23,7 +22,7 @@ export function Hero({
   ctaContact: string;
 }) {
   return (
-    <section className="relative isolate min-h-[100dvh] overflow-hidden">
+    <section className="relative isolate min-h-[100dvh] overflow-x-clip">
       <div className="absolute inset-0 bg-[linear-gradient(165deg,var(--paper)_0%,var(--mist)_48%,var(--paper)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_70%_0%,var(--glow),transparent_55%)]" />
       <div className="pointer-events-none absolute -left-32 bottom-0 h-[40vh] w-[50vw] bg-[radial-gradient(circle,rgba(15,127,120,0.08),transparent_70%)] blur-2xl dark:bg-[radial-gradient(circle,rgba(61,184,174,0.1),transparent_70%)]" />
@@ -42,23 +41,23 @@ export function Hero({
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-6xl flex-col justify-center px-6 pb-20 pt-36 md:pb-24 md:pt-32">
+      <div className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-6xl flex-col justify-center overflow-visible px-6 pb-20 pt-36 md:pb-24 md:pt-32">
         <div
-          className="mb-10 flex animate-hero-rise items-center gap-5"
+          className="mb-10 flex animate-hero-rise items-center gap-5 overflow-visible"
           style={{ animationDelay: "0.04s" }}
         >
           <a
             href="https://gimm.pt/"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-90 transition-opacity hover:opacity-100"
+            className="inline-flex shrink-0 overflow-visible py-1 pr-1 opacity-90 transition-opacity hover:opacity-100"
           >
             <GimmLogo
               variant="lockup"
               width={200}
               height={50}
               priority
-              className="h-9 md:h-10"
+              className="h-9 overflow-visible md:h-10"
             />
           </a>
           <span className="hidden h-8 w-px shrink-0 bg-line sm:block" />
@@ -68,7 +67,7 @@ export function Hero({
         </div>
 
         <h1
-          className="max-w-4xl animate-hero-rise font-display text-[clamp(3rem,9vw,6.5rem)] leading-[0.92] tracking-[-0.04em] text-ink"
+          className="max-w-4xl animate-hero-rise font-display text-[clamp(2.75rem,8vw,5.75rem)] leading-[0.94] tracking-[-0.04em] text-ink"
           style={{ animationDelay: "0.12s" }}
         >
           {headline}
@@ -104,43 +103,9 @@ export function Hero({
         </div>
 
         <div
-          className="mt-16 flex animate-hero-rise flex-wrap items-end justify-between gap-8 border-t border-line pt-8"
+          className="mt-16 flex animate-hero-rise justify-start border-t border-line pt-8"
           style={{ animationDelay: "0.56s" }}
         >
-          <div className="flex flex-wrap items-center gap-8 md:gap-12">
-            <div>
-              <NumberTicker
-                value={100}
-                suffix="+"
-                delay={200}
-                className="font-display text-3xl text-ink md:text-4xl"
-              />
-              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-ink/40">
-                {locale === "pt" ? "Publicações" : "Publications"}
-              </p>
-            </div>
-            <div>
-              <NumberTicker
-                value={6}
-                delay={320}
-                className="font-display text-3xl text-ink md:text-4xl"
-              />
-              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-ink/40">
-                {locale === "pt" ? "Projetos ativos" : "Active projects"}
-              </p>
-            </div>
-            <div>
-              <NumberTicker
-                value={5}
-                delay={440}
-                className="font-display text-3xl text-ink md:text-4xl"
-              />
-              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-ink/40">
-                {locale === "pt" ? "Prémios" : "Awards"}
-              </p>
-            </div>
-          </div>
-
           <a
             href="#research"
             className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/40 transition-colors hover:text-teal"
