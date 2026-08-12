@@ -81,7 +81,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       <header className="pointer-events-none fixed inset-x-0 top-0 z-40 flex justify-center px-4 pt-5">
         <div
           className={cn(
-            "pointer-events-auto flex w-full max-w-5xl items-center justify-between gap-4 rounded-full px-3 py-2 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
+            "pointer-events-auto flex w-full max-w-5xl items-center justify-between gap-4 rounded-full px-3 py-2.5 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
             scrolled
               ? "bg-surface/85 shadow-[0_12px_40px_rgba(20,32,51,0.08)] ring-1 ring-line backdrop-blur-xl dark:shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
               : "bg-surface/55 ring-1 ring-line/80 backdrop-blur-md"
@@ -89,10 +89,10 @@ export function SiteHeader({ locale }: { locale: Locale }) {
         >
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-2.5 rounded-full px-2.5 py-1.5 transition-opacity hover:opacity-80"
+            className="flex items-center gap-3 rounded-full px-2.5 py-1.5 transition-opacity hover:opacity-80"
           >
-            <NsMark width={36} height={36} priority className="h-9 w-9" />
-            <span className="hidden font-display text-lg leading-none text-ink sm:block">
+            <NsMark width={44} height={44} priority className="h-11 w-11" />
+            <span className="hidden font-display text-[1.35rem] leading-none tracking-[-0.02em] text-ink sm:block md:text-[1.5rem]">
               {siteConfig.name}
             </span>
           </Link>
