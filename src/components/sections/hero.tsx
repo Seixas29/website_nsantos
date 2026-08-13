@@ -3,6 +3,7 @@
 import { GimmLogo } from "@/components/brand/gimm-logo";
 import { NsMark } from "@/components/brand/ns-mark";
 import { Button, ButtonIcon } from "@/components/ui/button";
+import { LabRadialBackground } from "@/components/ui/lab-radial-background";
 import { siteConfig } from "@/data/site";
 import type { Locale } from "@/i18n/config";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
@@ -25,9 +26,7 @@ export function Hero({
 }) {
   return (
     <section className="relative isolate min-h-[100dvh] overflow-x-clip">
-      <div className="absolute inset-0 bg-[linear-gradient(165deg,var(--paper)_0%,var(--mist)_48%,var(--paper)_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_70%_0%,var(--glow),transparent_55%)]" />
-      <div className="pointer-events-none absolute -left-32 bottom-0 h-[40vh] w-[50vw] bg-[radial-gradient(circle,rgba(15,127,120,0.1),transparent_70%)] blur-2xl dark:bg-[radial-gradient(circle,rgba(61,184,174,0.12),transparent_70%)]" />
+      <LabRadialBackground />
 
       {/* Lab mark — real visual presence on the right */}
       <div
