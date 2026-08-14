@@ -8,11 +8,21 @@
     "closeMenu": "Fechar menu"
   },
   "home": {
-    "eyebrow": "Lisboa",
-    "headline": "Biomembranas e nanomedicina",
-    "subhead": "Na interface entre células, patógenos e ferramentas moleculares para a saúde.",
+    "eyebrow": "GIMM · Lisboa",
+    "headline": "Avançar biomembranas e nanomedicina para a saúde humana",
+    "subhead": "Estudamos processos membranares na interface entre células, patógenos e ferramentas moleculares — de vírus envelopados e risco cardiovascular a péptidos, biossensores e AFM.",
     "ctaResearch": "Explorar investigação",
-    "ctaContact": "Contactar",
+    "ctaTeam": "Conhecer a equipa",
+    "featuredTitle": "Investigação em destaque",
+    "featuredLead": "O laboratório foca-se em biomembranas, nanomedicina e ferramentas moleculares na fronteira da infeção, inflamação e diagnóstico.",
+    "learnMore": "Saber mais",
+    "highlightsTitle": "Destaques recentes",
+    "highlightsViewAll": "Ver tudo",
+    "awardLabel": "Prémios",
+    "publicationLabel": "Publicações",
+    "ctaBandTitle": "Explorar a nossa investigação",
+    "ctaBandLead": "Descubra projetos ativos, temas em foco e colaborações em biomembranas e nanomedicina.",
+    "ctaBandButton": "Ver projetos",
     "axesEyebrow": "Áreas de investigação",
     "axesTitle": "O que estudamos",
     "axesLead": "Dos mecanismos membranares de vírus envelopados e risco cardiovascular a péptidos antimicrobianos, biossensores, AFM e vigilância de vetores.",
@@ -45,26 +55,26 @@
   "team": {
     "eyebrow": "Equipa",
     "title": "As pessoas por detrás da ciência",
-    "lead": "Membros do grupo conforme a página do Laboratório Nuno Santos no GIMM."
+    "lead": "Membros do grupo listados na página do Laboratório Nuno Santos no GIMM."
   },
   "publications": {
     "eyebrow": "Publicações",
-    "title": "Publicações selecionadas",
-    "lead": "Publicações selecionadas do laboratório. Listas completas disponíveis na página do lab no GIMM e em repositórios institucionais.",
+    "title": "Artigos selecionados",
+    "lead": "Publicações selecionadas do laboratório. Listas completas estão disponíveis na página GIMM e repositórios institucionais.",
     "viewDoi": "Ver DOI"
   },
   "contact": {
     "eyebrow": "Contacto",
-    "title": "Fale connosco",
-    "lead": "Para colaborações, oportunidades para estudantes ou imprensa.",
+    "title": "Entre em contacto",
+    "lead": "Para colaborações, oportunidades para estudantes ou pedidos de imprensa.",
     "email": "Email",
     "emailCta": "Enviar email",
     "address": "Morada",
     "affiliations": "Afiliações",
-    "gimmPage": "Página do lab no GIMM"
+    "gimmPage": "Página do laboratório no GIMM"
   },
   "footer": {
-    "tagline": "Biomembranas · Nanomedicina",
+    "tagline": "Biomembranas · Nanomedicina no GIMM",
     "rights": "Todos os direitos reservados."
   }
 }

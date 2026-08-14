@@ -1,9 +1,9 @@
-import { ExternalHubs } from "@/components/sections/external-hubs";
+import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
+import { FeaturedResearch } from "@/components/sections/featured-research";
 import { Hero } from "@/components/sections/hero";
 import { PartnersMarquee } from "@/components/sections/partners-marquee";
-import { ResearchAxes } from "@/components/sections/research-axes";
+import { RecentHighlights } from "@/components/sections/recent-highlights";
 import { StatsBand } from "@/components/sections/stats-band";
-import { TeamPreview } from "@/components/sections/team-preview";
 import { siteConfig } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
@@ -41,34 +41,27 @@ export default async function HomePage({
         headline={t(dict, "home.headline")}
         subhead={t(dict, "home.subhead")}
         ctaResearch={t(dict, "home.ctaResearch")}
-        ctaContact={t(dict, "home.ctaContact")}
+        ctaTeam={t(dict, "home.ctaTeam")}
       />
-      <ResearchAxes
+      <StatsBand locale={locale} />
+      <FeaturedResearch
         locale={locale}
-        eyebrow={t(dict, "home.axesEyebrow")}
-        title={t(dict, "home.axesTitle")}
-        lead={t(dict, "home.axesLead")}
-        linkLabel={t(dict, "home.axesLink")}
+        title={t(dict, "home.featuredTitle")}
+        lead={t(dict, "home.featuredLead")}
+        learnMore={t(dict, "home.learnMore")}
       />
-      <ExternalHubs
+      <RecentHighlights
         locale={locale}
-        eyebrow={t(dict, "home.hubsEyebrow")}
-        title={t(dict, "home.hubsTitle")}
-        lead={t(dict, "home.hubsLead")}
-        visitLabel={t(dict, "home.visitSite")}
-        soonLabel={t(dict, "home.comingSoon")}
+        title={t(dict, "home.highlightsTitle")}
+        viewAll={t(dict, "home.highlightsViewAll")}
+        awardLabel={t(dict, "home.awardLabel")}
+        publicationLabel={t(dict, "home.publicationLabel")}
       />
-      <StatsBand
+      <ExploreCtaBand
         locale={locale}
-        eyebrow={t(dict, "home.statsEyebrow")}
-        title={t(dict, "home.statsTitle")}
-      />
-      <TeamPreview
-        locale={locale}
-        eyebrow={t(dict, "home.teamEyebrow")}
-        title={t(dict, "home.teamTitle")}
-        lead={t(dict, "home.teamLead")}
-        linkLabel={t(dict, "home.teamLink")}
+        title={t(dict, "home.ctaBandTitle")}
+        lead={t(dict, "home.ctaBandLead")}
+        cta={t(dict, "home.ctaBandButton")}
       />
       <PartnersMarquee
         locale={locale}

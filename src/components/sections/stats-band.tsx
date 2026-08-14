@@ -1,39 +1,30 @@
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { stats } from "@/data/site";
 import type { Locale } from "@/i18n/config";
+import { Award, BookOpen, FlaskConical, Layers } from "lucide-react";
 
-export function StatsBand({
-  locale,
-  eyebrow,
-  title,
-}: {
-  locale: Locale;
-  eyebrow: string;
-  title: string;
-}) {
+const icons = [Layers, BookOpen, FlaskConical, Award] as const;
+
+export function StatsBand({ locale }: { locale: Locale }) {
   return (
-    <section className="relative overflow-hidden border-y border-line bg-mist/60">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--glow),transparent_50%)]" />
-      <div className="relative mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
-        <div className="mb-14">
-          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-teal">
-            {eyebrow}
-          </p>
-          <h2 className="font-display text-4xl text-ink md:text-6xl">{title}</h2>
-        </div>
-
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-6">
-          {stats.map((stat) => (
-            <div key={stat.label.en}>
+    <section className="border-b border-line bg-surface">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-8 px-6 py-12 md:grid-cols-4 md:gap-6 md:py-14">
+        {stats.map((stat, i) => {
+          const Icon = icons[i] ?? Layers;
+          return (
+            <div key={stat.label.en} className="flex flex-col items-start gap-3 md:items-center md:text-center">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal/10 text-teal">
+                <Icon className="h-5 w-5" strokeWidth={1.75} />
+              </span>
               <NumberTicker
                 value={stat.value}
                 suffix={stat.suffix}
-                className="font-display text-5xl text-teal md:text-7xl"
+                className="font-display text-4xl font-semibold text-ink md:text-5xl"
               />
-              <p className="mt-3 text-sm text-ink/50">{stat.label[locale]}</p>
+              <p className="text-sm font-medium text-teal">{stat.label[locale]}</p>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );

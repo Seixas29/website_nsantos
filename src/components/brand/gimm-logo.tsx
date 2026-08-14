@@ -23,14 +23,32 @@ export function GimmLogo({
   width,
   height,
   priority = false,
+  /** Force the light-on-dark asset (e.g. always-dark hero). */
+  onDarkSurface = false,
 }: {
   variant?: keyof typeof marks;
   className?: string;
   width: number;
   height: number;
   priority?: boolean;
+  onDarkSurface?: boolean;
 }) {
   const pair = marks[variant];
+
+  if (onDarkSurface) {
+    return (
+      <span className={cn("relative inline-flex shrink-0 overflow-visible", className)}>
+        <Image
+          src={pair.dark}
+          alt="GIMM – Gulbenkian Institute for Molecular Medicine"
+          width={width}
+          height={height}
+          priority={priority}
+          className="h-full w-auto max-w-none object-contain object-left"
+        />
+      </span>
+    );
+  }
 
   return (
     <span className={cn("relative inline-flex shrink-0 overflow-visible", className)}>

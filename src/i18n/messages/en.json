@@ -8,11 +8,21 @@
     "closeMenu": "Close menu"
   },
   "home": {
-    "eyebrow": "Lisbon",
-    "headline": "Biomembranes & nanomedicine",
-    "subhead": "At the interface of cells, pathogens, and molecular tools for health.",
+    "eyebrow": "GIMM · Lisbon",
+    "headline": "Advancing biomembranes and nanomedicine for human health",
+    "subhead": "We study membrane processes at the interface of cells, pathogens, and molecular tools — from enveloped viruses and cardiovascular risk to peptides, biosensors, and AFM.",
     "ctaResearch": "Explore research",
-    "ctaContact": "Get in touch",
+    "ctaTeam": "Meet our team",
+    "featuredTitle": "Featured research",
+    "featuredLead": "Our lab focuses on biomembranes, nanomedicine, and molecular tools at the frontier of infection, inflammation, and diagnostics.",
+    "learnMore": "Learn more",
+    "highlightsTitle": "Recent highlights",
+    "highlightsViewAll": "View all",
+    "awardLabel": "Awards",
+    "publicationLabel": "Publications",
+    "ctaBandTitle": "Explore our research",
+    "ctaBandLead": "Discover active projects, focus themes, and collaborations across biomembranes and nanomedicine.",
+    "ctaBandButton": "View projects",
     "axesEyebrow": "Research areas",
     "axesTitle": "What we study",
     "axesLead": "From enveloped-virus membrane mechanisms and cardiovascular risk to antimicrobial peptides, biosensors, AFM, and vector surveillance.",
@@ -64,7 +74,7 @@
     "gimmPage": "GIMM lab page"
   },
   "footer": {
-    "tagline": "Biomembranes · Nanomedicine",
+    "tagline": "Biomembranes · Nanomedicine at GIMM",
     "rights": "All rights reserved."
   }
 }
