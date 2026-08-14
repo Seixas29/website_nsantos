@@ -49,10 +49,6 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   }, []);
 
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -94,9 +90,13 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <Link
             href={homeHref}
             className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
+            aria-label={siteConfig.name}
           >
             <NsMark width={36} height={36} priority className="h-9 w-9" />
-            <span className="font-display text-lg font-semibold leading-none tracking-[-0.02em] text-ink md:text-xl">
+            <span
+              aria-hidden
+              className="font-display text-lg font-semibold leading-none tracking-[-0.02em] text-ink md:text-xl"
+            >
               {siteConfig.name}
             </span>
           </Link>
@@ -183,6 +183,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
         <nav className="flex h-full flex-col justify-center gap-2 px-8 pt-16">
           <Link
             href={homeHref}
+            onClick={() => setOpen(false)}
             className={cn(
               "font-display text-5xl text-ink transition-all duration-700",
               open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
@@ -194,6 +195,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             <Link
               key={link.href}
               href={`/${locale}${link.href}`}
+              onClick={() => setOpen(false)}
               className={cn(
                 "font-display text-5xl text-ink transition-all duration-700",
                 open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"

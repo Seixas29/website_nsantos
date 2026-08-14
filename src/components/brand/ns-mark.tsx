@@ -17,7 +17,10 @@ export function NsMark({
 }) {
   if (onDarkSurface) {
     return (
-      <span className={cn("relative inline-flex shrink-0 overflow-visible", className)}>
+      <span
+        className={cn("relative inline-flex shrink-0 overflow-visible", className)}
+        aria-hidden
+      >
         <Image
           src="/images/brand/ns-mark-dark.png"
           alt=""
@@ -25,15 +28,16 @@ export function NsMark({
           height={height}
           priority={priority}
           className="h-full w-auto max-w-none object-contain"
-          aria-hidden
         />
-        <span className="sr-only">Nuno Santos Lab</span>
       </span>
     );
   }
 
   return (
-    <span className={cn("relative inline-flex shrink-0 overflow-visible", className)}>
+    <span
+      className={cn("relative inline-flex shrink-0 overflow-visible", className)}
+      aria-hidden
+    >
       <Image
         src="/images/brand/ns-mark-light.png"
         alt=""
@@ -41,7 +45,6 @@ export function NsMark({
         height={height}
         priority={priority}
         className="h-full w-auto max-w-none object-contain dark:hidden"
-        aria-hidden
       />
       <Image
         src="/images/brand/ns-mark-dark.png"
@@ -50,9 +53,7 @@ export function NsMark({
         height={height}
         priority={priority}
         className="hidden h-full w-auto max-w-none object-contain dark:block"
-        aria-hidden
       />
-      <span className="sr-only">Nuno Santos Lab</span>
     </span>
   );
 }

@@ -62,6 +62,7 @@ export default async function HomePage({
         title={t(dict, "home.ctaBandTitle")}
         lead={t(dict, "home.ctaBandLead")}
         cta={t(dict, "home.ctaBandButton")}
+        href={`/${locale}/research`}
       />
       <PartnersMarquee
         locale={locale}

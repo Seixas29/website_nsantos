@@ -4,6 +4,7 @@ import { Marquee } from "@/components/ui/marquee";
 import { partners } from "@/data/site";
 import type { Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 function PartnerPill({
   children,
@@ -63,14 +64,16 @@ export function PartnersMarquee({
                 className="h-7 opacity-90"
               />
             ) : (
-              <img
+              <Image
                 src={partner.src}
                 alt={partner.name}
+                width={160}
+                height={44}
                 className={cn(
-                  "max-h-9 w-auto object-contain",
-                  partner.id === "fmul" && "max-h-11",
-                  partner.id === "horizon" && "max-h-10",
-                  partner.id === "lacaixa" && "max-h-8",
+                  "h-9 w-auto max-w-[140px] object-contain",
+                  partner.id === "fmul" && "h-11",
+                  partner.id === "horizon" && "h-10",
+                  partner.id === "lacaixa" && "h-8",
                 )}
               />
             )}

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
 
 const ORBITS = [
   { r: 70, duration: 18, reverse: false, size: 8 },
@@ -10,12 +9,6 @@ const ORBITS = [
 ];
 
 export function MolecularOrbit() {
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    setReady(true);
-  }, []);
-
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[28rem]">
       <div className="absolute inset-[12%] rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(13,115,119,0.35),transparent_55%),radial-gradient(circle_at_70%_70%,rgba(12,18,34,0.12),transparent_50%)] blur-2xl" />
@@ -29,34 +22,33 @@ export function MolecularOrbit() {
         </div>
       </div>
 
-      {ready &&
-        ORBITS.map((orbit, i) => (
-          <div
-            key={i}
-            className="absolute left-1/2 top-1/2 rounded-full border border-ink/10"
-            style={{
-              width: orbit.r * 2,
-              height: orbit.r * 2,
-              marginLeft: -orbit.r,
-              marginTop: -orbit.r,
+      {ORBITS.map((orbit, i) => (
+        <div
+          key={i}
+          className="absolute left-1/2 top-1/2 rounded-full border border-ink/10"
+          style={{
+            width: orbit.r * 2,
+            height: orbit.r * 2,
+            marginLeft: -orbit.r,
+            marginTop: -orbit.r,
+          }}
+        >
+          <motion.div
+            className="absolute inset-0"
+            animate={{ rotate: orbit.reverse ? -360 : 360 }}
+            transition={{
+              duration: orbit.duration,
+              repeat: Infinity,
+              ease: "linear",
             }}
           >
-            <motion.div
-              className="absolute inset-0"
-              animate={{ rotate: orbit.reverse ? -360 : 360 }}
-              transition={{
-                duration: orbit.duration,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            >
-              <div
-                className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal shadow-[0_0_18px_rgba(13,115,119,0.55)]"
-                style={{ width: orbit.size, height: orbit.size }}
-              />
-            </motion.div>
-          </div>
-        ))}
+            <div
+              className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal shadow-[0_0_18px_rgba(13,115,119,0.55)]"
+              style={{ width: orbit.size, height: orbit.size }}
+            />
+          </motion.div>
+        </div>
+      ))}
 
       <motion.div
         className="absolute -right-2 top-[18%] rounded-2xl bg-paper/80 px-3 py-2 text-[11px] shadow-[0_10px_40px_rgba(12,18,34,0.08)] ring-1 ring-ink/8 backdrop-blur-md"

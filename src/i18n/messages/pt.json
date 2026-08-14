@@ -45,23 +45,35 @@
     "eyebrow": "Investigação",
     "title": "Biomembranas e nanomedicina",
     "lead": "Processos bioquímicos e biofísicos ao nível das membranas das células humanas e dos seus agentes patogénicos virais e bacterianos.",
+    "overviewTitle": "A nossa abordagem",
     "areasTitle": "Áreas de investigação",
     "axesTitle": "Temas em foco",
+    "axesLead": "Seis temas interligados que abrangem infeção, membranas, péptidos, diagnóstico e biologia de vetores.",
     "projectsTitle": "Projetos ativos",
     "projectsLead": "Programas em curso financiados pela FCT, EU Horizon, Compete 2030 e consórcios internacionais.",
     "previousTitle": "Projetos anteriores",
-    "awardsTitle": "Prémios"
+    "awardsTitle": "Prémios",
+    "ctaTitle": "Conheça as pessoas por detrás da ciência",
+    "ctaLead": "Investigadores, estudantes e staff em biomembranas e nanomedicina no GIMM.",
+    "ctaButton": "Ver equipa",
+    "ctaContact": "Contactar"
   },
   "team": {
     "eyebrow": "Equipa",
     "title": "As pessoas por detrás da ciência",
-    "lead": "Membros do grupo listados na página do Laboratório Nuno Santos no GIMM."
+    "lead": "Investigadores, estudantes e staff em biomembranas, nanomedicina e biologia de vetores no GIMM.",
+    "ctaTitle": "Interessado em juntar-se ao laboratório?",
+    "ctaLead": "Contacte-nos para colaborações, oportunidades para estudantes ou questões de investigação.",
+    "ctaButton": "Entrar em contacto"
   },
   "publications": {
     "eyebrow": "Publicações",
     "title": "Artigos selecionados",
-    "lead": "Publicações selecionadas do laboratório. Listas completas estão disponíveis na página GIMM e repositórios institucionais.",
-    "viewDoi": "Ver DOI"
+    "lead": "Uma seleção do laboratório. Listas completas estão disponíveis na página GIMM e repositórios institucionais.",
+    "viewDoi": "Ver DOI",
+    "ctaTitle": "Explorar a investigação relacionada",
+    "ctaLead": "Veja projetos ativos, temas em foco e colaborações do laboratório.",
+    "ctaButton": "Ver investigação"
   },
   "contact": {
     "eyebrow": "Contacto",
@@ -71,7 +83,10 @@
     "emailCta": "Enviar email",
     "address": "Morada",
     "affiliations": "Afiliações",
-    "gimmPage": "Página do laboratório no GIMM"
+    "gimmPage": "Página do laboratório no GIMM",
+    "ctaTitle": "Descubra a nossa investigação",
+    "ctaLead": "Explore temas em foco, projetos ativos e prémios recentes.",
+    "ctaButton": "Ver investigação"
   },
   "footer": {
     "tagline": "Biomembranas · Nanomedicina no GIMM",

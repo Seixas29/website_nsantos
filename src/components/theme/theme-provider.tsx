@@ -2,6 +2,7 @@
 
 import {
   createContext,
+  startTransition,
   useCallback,
   useContext,
   useEffect,
@@ -42,9 +43,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const initial = readTheme();
-    setThemeState(initial);
     applyTheme(initial);
-    setReady(true);
+    startTransition(() => {
+      setThemeState(initial);
+      setReady(true);
+    });
   }, []);
 
   const setTheme = useCallback((next: Theme) => {

@@ -42,13 +42,16 @@ export function TeamPhoto({
     return (
       <div
         className={cn(
-          "flex shrink-0 items-center justify-center rounded-full bg-mist font-mono tracking-wider text-ink/70",
+          "relative flex shrink-0 items-center justify-center overflow-hidden rounded-full font-mono tracking-wider text-teal",
+          "bg-[radial-gradient(circle_at_30%_25%,rgba(61,184,174,0.35),transparent_55%),linear-gradient(145deg,#e8f4f3_0%,#d5e8e6_48%,#c5dfe0_100%)]",
+          "ring-1 ring-teal/20 dark:bg-[radial-gradient(circle_at_30%_25%,rgba(61,184,174,0.28),transparent_55%),linear-gradient(145deg,#163039_0%,#0f242c_100%)] dark:text-teal-soft dark:ring-teal/30",
           dims,
           text,
           className
         )}
+        aria-hidden
       >
-        {initials(name)}
+        <span className="relative z-10 font-semibold">{initials(name)}</span>
       </div>
     );
   }

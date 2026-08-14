@@ -3,15 +3,16 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export function ExploreCtaBand({
-  locale,
   title,
   lead,
   cta,
+  href,
 }: {
-  locale: Locale;
+  locale?: Locale;
   title: string;
   lead: string;
   cta: string;
+  href: string;
 }) {
   return (
     <section className="bg-teal">
@@ -23,7 +24,7 @@ export function ExploreCtaBand({
           {lead}
         </p>
         <Link
-          href={`/${locale}/research`}
+          href={href}
           className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/50 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 dark:text-paper"
         >
           {cta}

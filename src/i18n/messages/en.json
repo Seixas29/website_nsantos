@@ -45,23 +45,35 @@
     "eyebrow": "Research",
     "title": "Biomembranes & nanomedicine",
     "lead": "Biochemical and biophysical processes at human cell membranes and their viral and bacterial pathogens.",
+    "overviewTitle": "Our approach",
     "areasTitle": "Research areas",
     "axesTitle": "Focus themes",
+    "axesLead": "Six interconnected themes spanning infection, membranes, peptides, diagnostics, and vector biology.",
     "projectsTitle": "Active projects",
     "projectsLead": "Ongoing programmes funded by FCT, EU Horizon, Compete 2030 and international consortia.",
     "previousTitle": "Previous projects",
-    "awardsTitle": "Awards"
+    "awardsTitle": "Awards",
+    "ctaTitle": "Meet the people behind the science",
+    "ctaLead": "Researchers, students and staff driving biomembranes and nanomedicine at GIMM.",
+    "ctaButton": "View team",
+    "ctaContact": "Contact us"
   },
   "team": {
     "eyebrow": "Team",
     "title": "The people behind the science",
-    "lead": "Group members listed on the GIMM Nuno Santos Laboratory page."
+    "lead": "Researchers, students and staff across biomembranes, nanomedicine and vector biology at GIMM.",
+    "ctaTitle": "Interested in joining the lab?",
+    "ctaLead": "Reach out for collaborations, student opportunities, or research enquiries.",
+    "ctaButton": "Get in touch"
   },
   "publications": {
     "eyebrow": "Publications",
     "title": "Selected papers",
-    "lead": "Selected publications from the laboratory. Full lists are available via the GIMM lab page and institutional repositories.",
-    "viewDoi": "View DOI"
+    "lead": "A curated selection from the laboratory. Full lists are available via the GIMM lab page and institutional repositories.",
+    "viewDoi": "View DOI",
+    "ctaTitle": "Explore related research",
+    "ctaLead": "See active projects, focus themes, and collaborations across the lab.",
+    "ctaButton": "View research"
   },
   "contact": {
     "eyebrow": "Contact",
@@ -71,7 +83,10 @@
     "emailCta": "Send email",
     "address": "Address",
     "affiliations": "Affiliations",
-    "gimmPage": "GIMM lab page"
+    "gimmPage": "GIMM lab page",
+    "ctaTitle": "Discover our research",
+    "ctaLead": "Browse focus themes, active projects, and recent awards.",
+    "ctaButton": "View research"
   },
   "footer": {
     "tagline": "Biomembranes · Nanomedicine at GIMM",

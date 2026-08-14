@@ -20,7 +20,7 @@ export function SiteFooter({
           <div className="flex items-center gap-2.5">
             <NsMark width={36} height={36} className="h-9 w-9" onDarkSurface />
             <p className="font-display text-xl font-semibold tracking-[-0.02em]">
-              {siteConfig.name}
+              {siteConfig.name.trim()}
             </p>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-white/55">{tagline}</p>
@@ -107,7 +107,7 @@ export function SiteFooter({
       <div className="border-t border-white/10">
         <div className="mx-auto flex w-full max-w-7xl px-6 py-5">
           <p className="text-xs text-white/35">
-            © {new Date().getFullYear()} {siteConfig.name}. {rights}
+            © {new Date().getFullYear()} {siteConfig.name.trim()} · {rights.trim()}
           </p>
         </div>
       </div>
