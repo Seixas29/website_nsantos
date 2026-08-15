@@ -24,9 +24,6 @@ export function SiteFooter({
             </p>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-white/55">{tagline}</p>
-          <p className="mt-3 text-sm leading-relaxed text-white/40">
-            {siteConfig.description[locale].slice(0, 140)}…
-          </p>
         </div>
 
         <div>
