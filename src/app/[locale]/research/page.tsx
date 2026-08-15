@@ -22,6 +22,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 const axisIcons = [Dna, Sparkles, Microscope, HeartPulse, Activity, Radar] as const;
+const axisAccents = [
+  "from-[#0b3d3a] via-[#0f7f78] to-[#3db8ae]",
+  "from-[#0a2a3a] via-[#1a6b8a] to-[#3db8ae]",
+  "from-[#0d2f2c] via-[#12706a] to-[#7ec8c2]",
+  "from-[#1a3a4a] via-[#0f6b7a] to-[#4db8c4]",
+  "from-[#0c2f3a] via-[#156b78] to-[#3db8ae]",
+  "from-[#12352f] via-[#0f7f78] to-[#5ec4b8]",
+] as const;
 
 export async function generateMetadata({
   params,
@@ -93,7 +101,7 @@ export default async function ResearchPage({
         </div>
       </section>
 
-      <section className="border-y border-line bg-mist/40 py-20 md:py-28">
+      <section className="border-y border-line bg-paper py-20 md:py-28">
         <div className="mx-auto w-full max-w-7xl px-6">
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <h2 className="font-display text-4xl font-semibold tracking-[-0.03em] text-ink md:text-5xl">
@@ -103,26 +111,45 @@ export default async function ResearchPage({
               {t(dict, "research.axesLead")}
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {researchAxes.map((axis, i) => {
               const Icon = axisIcons[i] ?? Dna;
+              const accent = axisAccents[i] ?? axisAccents[0];
               return (
                 <article
                   key={axis.id}
-                  className="flex flex-col border-t border-teal/40 bg-surface/80 pt-6"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_30px_rgba(20,32,51,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-teal/30 hover:shadow-[0_16px_40px_rgba(15,127,120,0.1)]"
                 >
-                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-teal/10 text-teal">
-                    <Icon className="h-5 w-5" strokeWidth={1.75} />
-                  </span>
-                  <p className="font-mono text-[11px] tracking-[0.18em] text-teal">
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-2 font-display text-xl font-semibold tracking-[-0.02em] text-ink">
-                    {axis.title[locale]}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/55">
-                    {axis.description[locale]}
-                  </p>
+                  <div
+                    className={`relative flex h-44 items-center justify-center overflow-hidden bg-linear-to-br ${accent}`}
+                  >
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,0.35)_1px,transparent_1px)] [background-size:18px_18px]"
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute -right-8 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl transition-transform duration-700 group-hover:scale-125"
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute -bottom-12 -left-6 h-36 w-36 rounded-full bg-black/20 blur-2xl"
+                    />
+                    <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-white/12 ring-1 ring-white/25 backdrop-blur-sm transition-transform duration-500 group-hover:scale-105">
+                      <Icon className="h-10 w-10 text-white" strokeWidth={1.4} />
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="font-mono text-[11px] tracking-[0.18em] text-teal">
+                      {String(i + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-2 font-display text-xl font-semibold tracking-[-0.02em] text-ink">
+                      {axis.title[locale]}
+                    </h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/55">
+                      {axis.description[locale]}
+                    </p>
+                  </div>
                 </article>
               );
             })}
