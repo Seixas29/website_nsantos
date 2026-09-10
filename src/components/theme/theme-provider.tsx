@@ -31,10 +31,7 @@ function applyTheme(theme: Theme) {
 function readTheme(): Theme {
   const stored = window.localStorage.getItem("ns-theme");
   if (stored === "dark" || stored === "light") return stored;
-  if (document.documentElement.classList.contains("dark")) return "dark";
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  return "light";
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {

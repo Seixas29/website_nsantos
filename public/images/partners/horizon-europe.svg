@@ -15,6 +15,6 @@
       <use xlink:href="#s5" transform="scale(-1,1)"/>
     </g>
   </g>
-  <text x="72" y="20" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0a1f44">Horizon Europe</text>
-  <text x="72" y="36" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#5a6a7a">European Union</text>
+  <text x="72" y="20" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#f4f7fb">Horizon Europe</text>
+  <text x="72" y="36" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="rgba(244,247,251,0.55)">European Union</text>
 </svg>

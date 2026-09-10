@@ -13,10 +13,12 @@ export const siteConfig = {
     en: [
       "We investigate biochemical and biophysical processes at the membranes of human cells and of their viral and bacterial pathogens. A core focus is the two stages of the enveloped-virus life cycle that involve biomembranes — entry of the virus or its contents into the target cell, and formation of new virions — with emphasis on HIV-1 and dengue virus. We also study fibrinogen binding to the erythrocyte membrane and its relevance as a cardiovascular risk factor.",
       "We perform preclinical evaluation of membrane activity and molecular mechanisms of action of antimicrobial peptides (AMPs) and cell-penetrating peptides (CPPs). In nanotechnology and nanomedicine, we develop innovative biosensor systems with improved selectivity and sensitivity, including nanoparticles and amyloid-based biosensors.",
+      "Within infectious diseases we also run an Aedes programme: an ACL-2 insectary, field ovitrap surveillance, citizen reports (OneVec, with Universidade Lusófona FMV), and Wolbachia methods in Aedes aegypti aimed at blocking virus transmission.",
     ],
     pt: [
       "Processos bioquímicos e biofísicos que ocorrem ao nível das membranas das células humanas, bem como dos seus agentes patogénicos virais e bacterianos. Estudo das duas etapas do ciclo de vida dos vírus envelopados (principalmente HIV-1 e vírus da dengue) que envolvem biomembranas — a entrada do vírus ou do seu conteúdo na célula-alvo e a formação de novos viriões. Estudo da ligação do fibrinogénio à membrana eritrocitária e da sua importância como fator de risco cardiovascular.",
       "Avaliação pré-clínica da atividade membranar e do mecanismo de ação a nível molecular dos péptidos antimicrobianos (AMP) e dos péptidos de penetração celular (CPP). Na área da Nanotecnologia/Nanomedicina, estamos também a trabalhar no desenvolvimento de sistemas inovadores de biossensores, com maior seletividade e sensibilidade (por exemplo, nanopartículas e biossensores baseados em amiloide).",
+      "Nas doenças infecciosas mantemos também um programa Aedes: insetário ACL-2, vigilância de campo com ovitrampas, reportes cidadãos (OneVec, com a Universidade Lusófona FMV) e métodos de Wolbachia em Aedes aegypti para bloquear a transmissão viral.",
     ],
   },
   email: "nuno.santos@gimm.pt",
@@ -37,24 +39,31 @@ export const siteConfig = {
     },
   ],
   external: {
-    surveillance: {
-      en: "Surveillance Network",
-      pt: "Rede de Vigilância",
-      // Replace with dedicated site URL when live
-      url: "",
+    insectary: {
+      en: "GIMM Aedes Insectary",
+      pt: "Insetário Aedes GIMM",
+      url: "https://gimm-aedes-insectary.vercel.app/",
       blurb: {
-        en: "Entomological monitoring across Lisbon — pathogen screening, resistance tracking, and spatial risk intelligence.",
-        pt: "Monitorização entomológica em Lisboa — deteção de patógenos, resistência e inteligência espacial de risco.",
+        en: "ACL-2 mosquito rearing in Lisbon, integrated with infection studies for vector competence research.",
+        pt: "Criação de mosquitos em ACL-2 em Lisboa, integrada com estudos de infeção para competência vetorial.",
       },
     },
-    insectary: {
-      en: "The Insectary",
-      pt: "O Insectário",
-      // Replace with dedicated site URL when live
-      url: "",
+    surveillance: {
+      en: "Ovitrap Network",
+      pt: "Rede de ovitrampas",
+      url: "https://gimm-ovitrap-network.vercel.app/",
       blurb: {
-        en: "ACL-2 mosquito rearing integrated with BSL-3 infection studies for vector competence research.",
-        pt: "Criação de mosquitos em ACL-2 integrada com estudos de infeção em BSL-3 para competência vetorial.",
+        en: "Field ovitrap surveillance for invasive Aedes in Portugal — GIMM / FMUL.",
+        pt: "Vigilância de campo com ovitrampas para Aedes invasores em Portugal — GIMM / FMUL.",
+      },
+    },
+    onevec: {
+      en: "OneVec",
+      pt: "OneVec",
+      url: "https://onevec.vercel.app/",
+      blurb: {
+        en: "Citizen One Health surveillance of mosquitoes, ticks, sand flies, fleas and Culicoides — Universidade Lusófona FMV & GIMM.",
+        pt: "Vigilância cidadã One Health de mosquitos, carraças, flebótomos, pulgas e Culicoides — Universidade Lusófona FMV e GIMM.",
       },
     },
     gimmLab:
@@ -77,6 +86,9 @@ export const researchAreas = [
   { en: "Synthetic biology", pt: "Biologia sintética" },
   { en: "Cardiovascular risk assessment", pt: "Avaliação do risco cardiovascular" },
   { en: "Enveloped viruses", pt: "Vírus envelopados" },
+  { en: "Vector biology", pt: "Biologia de vetores" },
+  { en: "Aedes mosquitoes", pt: "Mosquitos Aedes" },
+  { en: "Wolbachia", pt: "Wolbachia" },
   { en: "Antimicrobial surface coatings", pt: "Revestimentos de superfícies antimicrobianos" },
   { en: "Antimicrobial peptides", pt: "Péptidos antimicrobianos" },
   { en: "Anticancer peptides", pt: "Péptidos anticancerígenos" },
@@ -86,60 +98,59 @@ export const researchAreas = [
 
 export const researchAxes = [
   {
-    id: "biomembranes",
-    title: { en: "Biomembranes & pathogen interfaces", pt: "Biomembranas e interfaces patogénicas" },
+    id: "infectious-diseases",
+    title: { en: "Infectious diseases", pt: "Doenças infecciosas" },
     description: {
-      en: "Membrane processes in human cells and pathogens — especially HIV-1 and dengue entry and virion assembly.",
-      pt: "Processos membranares em células humanas e patógenos — em especial entrada e montagem de viriões de HIV-1 e dengue.",
+      en: "Viral entry and assembly at host membranes — HIV-1, dengue and related flaviviruses — plus the Aedes pipeline: insectary, Wolbachia, ovitraps and citizen surveillance.",
+      pt: "Entrada e montagem viral nas membranas do hospedeiro — HIV-1, dengue e flavivírus relacionados — e o pipeline Aedes: insetário, Wolbachia, ovitrampas e vigilância cidadã.",
     },
-    span: "lg:col-span-2",
-  },
-  {
-    id: "nanomedicine",
-    title: { en: "Nanomedicine & peptides", pt: "Nanomedicina e péptidos" },
-    description: {
-      en: "Preclinical membrane activity of AMPs and CPPs, antimicrobial coatings, and anticancer peptide strategies.",
-      pt: "Atividade membranar pré-clínica de AMP e CPP, revestimentos antimicrobianos e estratégias com péptidos anticancerígenos.",
-    },
-    span: "",
-  },
-  {
-    id: "biosensors",
-    title: { en: "Biosensors & nanotech", pt: "Biossensores e nanotecnologia" },
-    description: {
-      en: "Next-generation biosensors with higher selectivity and sensitivity — including nanoparticle and amyloid-based systems.",
-      pt: "Biossensores de nova geração com maior seletividade e sensibilidade — incluindo sistemas baseados em nanopartículas e amiloide.",
-    },
-    span: "",
   },
   {
     id: "cardiovascular",
-    title: { en: "Cardiovascular risk", pt: "Risco cardiovascular" },
+    title: { en: "Cardiovascular", pt: "Cardiovascular" },
     description: {
-      en: "Fibrinogen–erythrocyte membrane interactions and AFM-based tools to assess cardiovascular risk.",
-      pt: "Interações fibrinogénio–membrana eritrocitária e ferramentas baseadas em AFM para avaliar o risco cardiovascular.",
+      en: "Fibrinogen–erythrocyte binding and AFM-based tools to read thrombotic and cardiovascular risk, including synthetic-erythrocyte work.",
+      pt: "Ligação fibrinogénio–eritrócito e ferramentas de AFM para ler risco trombótico e cardiovascular, incluindo eritrócitos sintéticos.",
     },
-    span: "",
   },
   {
-    id: "biophysics",
-    title: { en: "Biophysics & AFM", pt: "Biofísica e AFM" },
+    id: "cancer",
+    title: { en: "Cancer", pt: "Cancro" },
     description: {
-      en: "Quantitative biophysics and atomic force microscopy of cells, membranes, clots, and biomaterials at the nanoscale.",
-      pt: "Biofísica quantitativa e microscopia de força atómica de células, membranas, coágulos e biomateriais à nanoescala.",
+      en: "Membrane-active anticancer peptides and cell mechanics in tumour progression, from adhesions to nuclear biophysics.",
+      pt: "Péptidos anticancerígenos com atividade membranar e mecânica celular na progressão tumoral, das adesões à biofísica nuclear.",
     },
-    span: "",
-  },
-  {
-    id: "vectors",
-    title: { en: "Vector surveillance & control", pt: "Vigilância e controlo de vetores" },
-    description: {
-      en: "Tools for surveillance and control of Aedes mosquitoes — major vectors of dengue and Zika — including SMART-DIET.",
-      pt: "Ferramentas para vigilância e controlo de mosquitos Aedes — vetores de dengue e Zika — incluindo o SMART-DIET.",
-    },
-    span: "lg:col-span-2",
   },
 ] as const;
+
+export const vectorBiology = {
+  items: [
+    {
+      id: "aedes",
+      title: { en: "Aedes insectary", pt: "Insetário Aedes" },
+      body: {
+        en: "ACL-2 colonies in Lisbon for Aedes (and related mosquitoes), coupled to infection work for vector competence.",
+        pt: "Colónias ACL-2 em Lisboa de Aedes (e mosquitos relacionados), ligadas a ensaios de infeção para competência vetorial.",
+      },
+    },
+    {
+      id: "wolbachia",
+      title: { en: "Wolbachia", pt: "Wolbachia" },
+      body: {
+        en: "Methods to establish Wolbachia symbiosis in Aedes aegypti — including oral feeding — towards blocking flavivirus transmission.",
+        pt: "Métodos para estabelecer simbiose de Wolbachia em Aedes aegypti — incluindo alimentação oral — com vista a bloquear a transmissão de flavivírus.",
+      },
+    },
+    {
+      id: "surveillance",
+      title: { en: "Surveillance & control", pt: "Vigilância e controlo" },
+      body: {
+        en: "Field ovitraps (GIMM/FMUL), SMART-DIET tools for Aedes albopictus, and OneVec citizen reports with Universidade Lusófona FMV.",
+        pt: "Ovitrampas de campo (GIMM/FMUL), ferramentas SMART-DIET para Aedes albopictus e reportes cidadãos OneVec com a Universidade Lusófona FMV.",
+      },
+    },
+  ],
+} as const;
 
 export const projects = [
   {
@@ -533,7 +544,7 @@ export const publications = [
 ] as const;
 
 export const stats = [
-  { value: 11, suffix: "", label: { en: "Research areas", pt: "Áreas de investigação" } },
+  { value: 14, suffix: "", label: { en: "Research areas", pt: "Áreas de investigação" } },
   { value: 100, suffix: "+", label: { en: "Publications", pt: "Publicações" } },
   { value: 6, suffix: "", label: { en: "Active projects", pt: "Projetos ativos" } },
   { value: 5, suffix: "", label: { en: "Awards", pt: "Prémios" } },
@@ -573,7 +584,7 @@ export const partners = [
   {
     id: "lacaixa",
     name: "Fundación ”la Caixa”",
-    src: "/images/partners/lacaixa.png",
+    src: "/images/partners/lacaixa-foundation.png",
     url: "https://fundacionlacaixa.org/",
   },
 ] as const;

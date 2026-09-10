@@ -1,7 +1,7 @@
 import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
+import { ExternalHubs } from "@/components/sections/external-hubs";
 import { FeaturedResearch } from "@/components/sections/featured-research";
 import { Hero } from "@/components/sections/hero";
-import { PartnersMarquee } from "@/components/sections/partners-marquee";
 import { RecentHighlights } from "@/components/sections/recent-highlights";
 import { StatsBand } from "@/components/sections/stats-band";
 import { siteConfig } from "@/data/site";
@@ -42,6 +42,7 @@ export default async function HomePage({
         subhead={t(dict, "home.subhead")}
         ctaResearch={t(dict, "home.ctaResearch")}
         ctaTeam={t(dict, "home.ctaTeam")}
+        fundersLabel={t(dict, "home.fundersLabel")}
       />
       <StatsBand locale={locale} />
       <FeaturedResearch
@@ -49,6 +50,14 @@ export default async function HomePage({
         title={t(dict, "home.featuredTitle")}
         lead={t(dict, "home.featuredLead")}
         learnMore={t(dict, "home.learnMore")}
+      />
+      <ExternalHubs
+        locale={locale}
+        eyebrow={t(dict, "home.hubsEyebrow")}
+        title={t(dict, "home.hubsTitle")}
+        lead={t(dict, "home.hubsLead")}
+        visitLabel={t(dict, "home.visitSite")}
+        soonLabel={t(dict, "home.comingSoon")}
       />
       <RecentHighlights
         locale={locale}
@@ -63,11 +72,6 @@ export default async function HomePage({
         lead={t(dict, "home.ctaBandLead")}
         cta={t(dict, "home.ctaBandButton")}
         href={`/${locale}/research`}
-      />
-      <PartnersMarquee
-        locale={locale}
-        eyebrow={t(dict, "home.partnersEyebrow")}
-        title={t(dict, "home.partnersTitle")}
       />
     </>
   );

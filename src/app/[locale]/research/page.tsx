@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/layout/page-hero";
 import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
+import { ExternalHubs } from "@/components/sections/external-hubs";
 import {
   awards,
   previousProjects,
@@ -7,28 +8,19 @@ import {
   researchAreas,
   researchAxes,
   siteConfig,
+  vectorBiology,
 } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
-import {
-  Activity,
-  Dna,
-  HeartPulse,
-  Microscope,
-  Radar,
-  Sparkles,
-} from "lucide-react";
+import { Bug, Dna, HeartPulse, Ribbon } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-const axisIcons = [Dna, Sparkles, Microscope, HeartPulse, Activity, Radar] as const;
+const axisIcons = [Bug, HeartPulse, Ribbon] as const;
 const axisAccents = [
   "from-[#0b3d3a] via-[#0f7f78] to-[#3db8ae]",
   "from-[#0a2a3a] via-[#1a6b8a] to-[#3db8ae]",
   "from-[#0d2f2c] via-[#12706a] to-[#7ec8c2]",
-  "from-[#1a3a4a] via-[#0f6b7a] to-[#4db8c4]",
-  "from-[#0c2f3a] via-[#156b78] to-[#3db8ae]",
-  "from-[#12352f] via-[#0f7f78] to-[#5ec4b8]",
 ] as const;
 
 export async function generateMetadata({
@@ -117,8 +109,9 @@ export default async function ResearchPage({
               const accent = axisAccents[i] ?? axisAccents[0];
               return (
                 <article
+                  id={axis.id}
                   key={axis.id}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_30px_rgba(20,32,51,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-teal/30 hover:shadow-[0_16px_40px_rgba(15,127,120,0.1)]"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_30px_rgba(20,32,51,0.04)] scroll-mt-28 transition-all duration-500 hover:-translate-y-1 hover:border-teal/30 hover:shadow-[0_16px_40px_rgba(15,127,120,0.1)]"
                 >
                   <div
                     className={`relative flex h-44 items-center justify-center overflow-hidden bg-linear-to-br ${accent}`}
@@ -156,6 +149,52 @@ export default async function ResearchPage({
           </div>
         </div>
       </section>
+
+      <section
+        id="vector-biology"
+        className="border-b border-line bg-surface py-20 md:py-28"
+      >
+        <div className="mx-auto w-full max-w-7xl px-6">
+          <div className="mb-12 max-w-3xl">
+            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-teal">
+              {researchAxes[0].title[locale]}
+            </p>
+            <h2 className="font-display text-4xl font-semibold tracking-[-0.03em] text-ink md:text-5xl">
+              {t(dict, "research.vectorTitle")}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-ink/55 md:text-lg">
+              {t(dict, "research.vectorLead")}
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {vectorBiology.items.map((item, i) => (
+              <article
+                key={item.id}
+                className="rounded-2xl border border-line bg-paper p-6 md:p-8"
+              >
+                <p className="font-mono text-[11px] tracking-[0.18em] text-teal">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-3 font-display text-xl font-semibold tracking-[-0.02em] text-ink">
+                  {item.title[locale]}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink/55">
+                  {item.body[locale]}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ExternalHubs
+        locale={locale}
+        eyebrow={t(dict, "home.hubsEyebrow")}
+        title={t(dict, "home.hubsTitle")}
+        lead={t(dict, "home.hubsLead")}
+        visitLabel={t(dict, "home.visitSite")}
+        soonLabel={t(dict, "home.comingSoon")}
+      />
 
       <section className="bg-paper py-20 md:py-24">
         <div className="mx-auto w-full max-w-7xl px-6">

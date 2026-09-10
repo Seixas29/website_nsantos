@@ -19,7 +19,11 @@ export function ExternalHubs({
   visitLabel: string;
   soonLabel: string;
 }) {
-  const hubs = [siteConfig.external.surveillance, siteConfig.external.insectary];
+  const hubs = [
+    siteConfig.external.insectary,
+    siteConfig.external.surveillance,
+    siteConfig.external.onevec,
+  ];
 
   return (
     <section className="border-t border-line py-20 md:py-28">
@@ -32,7 +36,7 @@ export function ExternalHubs({
           <p className="mt-5 text-base leading-relaxed text-ink/55">{lead}</p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-3">
           {hubs.map((hub, i) => {
             const hasUrl = Boolean(hub.url);
             return (

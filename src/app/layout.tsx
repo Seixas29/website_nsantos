@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   },
   description:
     "Biomembranes, nanomedicine and vector biology research group at the Gulbenkian Institute for Molecular Medicine.",
-  metadataBase: new URL("https://nunosantoslab.vercel.app"),
+  metadataBase: new URL("https://nsantos.vercel.app"),
 };
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem('ns-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}var r=document.documentElement;r.classList.toggle('dark',t==='dark');r.dataset.theme=t;r.style.colorScheme=t}catch(e){}})();`;
+const themeInitScript = `(function(){try{var t=localStorage.getItem('ns-theme');if(t!=='light'&&t!=='dark'){t='light'}var r=document.documentElement;r.classList.toggle('dark',t==='dark');r.dataset.theme=t;r.style.colorScheme=t}catch(e){}})();`;
 
 export default function RootLayout({
   children,

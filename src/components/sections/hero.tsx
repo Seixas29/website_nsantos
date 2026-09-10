@@ -2,6 +2,7 @@
 
 import { GimmLogo } from "@/components/brand/gimm-logo";
 import { NsMark } from "@/components/brand/ns-mark";
+import { PartnersMarquee } from "@/components/sections/partners-marquee";
 import { Button, ButtonIcon } from "@/components/ui/button";
 import type { Locale } from "@/i18n/config";
 import { ArrowRight } from "lucide-react";
@@ -14,6 +15,7 @@ export function Hero({
   subhead,
   ctaResearch,
   ctaTeam,
+  fundersLabel,
 }: {
   locale: Locale;
   eyebrow: string;
@@ -21,9 +23,10 @@ export function Hero({
   subhead: string;
   ctaResearch: string;
   ctaTeam: string;
+  fundersLabel: string;
 }) {
   return (
-    <section className="relative isolate min-h-[min(92dvh,820px)] overflow-hidden bg-[#071018]">
+    <section className="relative isolate flex min-h-[min(92dvh,820px)] flex-col overflow-x-hidden bg-[#071018]">
       {/* Atmospheric scientific field — brand colors, no stock photos */}
       <div
         aria-hidden
@@ -41,10 +44,10 @@ export function Hero({
       </div>
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-[#071018] to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#071018] to-transparent"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[min(92dvh,820px)] w-full max-w-7xl flex-col justify-center px-6 pb-20 pt-16 md:pb-24 md:pt-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-6 pb-8 pt-16 md:pt-20">
         <div
           className="mb-8 flex animate-hero-rise items-center gap-4"
           style={{ animationDelay: "0.04s" }}
@@ -103,6 +106,10 @@ export function Hero({
             {ctaTeam}
           </Link>
         </div>
+      </div>
+
+      <div className="relative z-10 mt-auto">
+        <PartnersMarquee label={fundersLabel} />
       </div>
     </section>
   );

@@ -1,85 +1,57 @@
-import type { ReactNode } from "react";
-import { GimmLogo } from "@/components/brand/gimm-logo";
 import { Marquee } from "@/components/ui/marquee";
 import { partners } from "@/data/site";
-import type { Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-function PartnerPill({
-  children,
-  href,
-  className,
-}: {
-  children: ReactNode;
-  href?: string;
-  className?: string;
-}) {
-  const classes = cn(
-    "mx-2 flex h-16 items-center justify-center rounded-full border border-line bg-white px-8 shadow-[0_1px_0_rgba(20,32,51,0.04)]",
-    className,
-  );
+const funders = partners.filter((partner) => partner.id !== "gimm");
 
-  if (href) {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={cn(classes, "transition-opacity hover:opacity-80")}
-      >
-        {children}
-      </a>
-    );
-  }
+const invertOnDark = new Set(["fct", "compete2030", "lacaixa"]);
 
-  return <div className={classes}>{children}</div>;
-}
-
-export function PartnersMarquee({
-  eyebrow,
-  title,
-}: {
-  locale: Locale;
-  eyebrow: string;
-  title: string;
-}) {
+export function PartnersMarquee({ label }: { label: string }) {
   return (
-    <section className="border-y border-line py-16 md:py-20">
-      <div className="mx-auto mb-10 w-full max-w-7xl px-6">
-        <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.24em] text-teal">
-          {eyebrow}
+    <div className="border-t border-white/10">
+      <div className="flex items-center">
+        <p className="relative z-10 hidden shrink-0 items-center whitespace-nowrap bg-linear-to-r from-[#071018] from-65% to-transparent py-5 pl-6 pr-12 font-mono text-[10px] uppercase tracking-[0.22em] text-white/35 md:flex">
+          {label}
         </p>
-        <h2 className="font-display text-3xl text-ink md:text-5xl">{title}</h2>
-      </div>
-
-      <Marquee pauseOnHover className="[--duration:36s]">
-        {partners.map((partner) => (
-          <PartnerPill key={partner.id} href={partner.url}>
-            {partner.src === null ? (
-              <GimmLogo
-                variant="horizontal"
-                width={140}
-                height={36}
-                className="h-7 opacity-90"
-              />
-            ) : (
-              <Image
-                src={partner.src}
-                alt={partner.name}
-                width={160}
-                height={44}
-                className={cn(
-                  "h-9 w-auto max-w-[140px] object-contain",
-                  partner.id === "fmul" && "h-11",
-                  partner.id === "horizon" && "h-10",
-                  partner.id === "lacaixa" && "h-8",
-                )}
-              />
+        <div className="min-w-0 flex-1 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+          <Marquee
+            pauseOnHover
+            className="py-5 [--duration:50s] [--gap:3.75rem]"
+          >
+            {funders.map((partner) =>
+              partner.src ? (
+                <a
+                  key={partner.id}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "flex h-11 items-center transition-opacity duration-300",
+                    invertOnDark.has(partner.id)
+                      ? "opacity-70 brightness-0 invert hover:opacity-100"
+                      : "opacity-90 hover:opacity-100",
+                  )}
+                >
+                  <Image
+                    src={partner.src}
+                    alt={partner.name}
+                    width={140}
+                    height={36}
+                    unoptimized
+                    className={cn(
+                      "h-7 w-auto max-w-[140px] object-contain",
+                      partner.id === "fmul" && "h-8",
+                      partner.id === "lacaixa" && "h-6",
+                      partner.id === "horizon" && "h-8 max-w-[168px]",
+                    )}
+                  />
+                </a>
+              ) : null,
             )}
-          </PartnerPill>
-        ))}
-      </Marquee>
-    </section>
+          </Marquee>
+        </div>
+      </div>
+    </div>
   );
 }

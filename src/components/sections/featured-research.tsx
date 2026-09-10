@@ -1,10 +1,10 @@
 import { researchAxes } from "@/data/site";
 import type { Locale } from "@/i18n/config";
-import { ArrowRight, Dna, Microscope, Sparkles } from "lucide-react";
+import { ArrowRight, Bug, HeartPulse, Ribbon } from "lucide-react";
 import Link from "next/link";
 
 const featured = researchAxes.slice(0, 3);
-const icons = [Dna, Sparkles, Microscope] as const;
+const icons = [Bug, HeartPulse, Ribbon] as const;
 const accents = [
   "from-[#0b3d3a] via-[#0f7f78] to-[#3db8ae]",
   "from-[#0a2a3a] via-[#1a6b8a] to-[#3db8ae]",
@@ -34,11 +34,11 @@ export function FeaturedResearch({
 
         <div className="grid gap-8 md:grid-cols-3">
           {featured.map((axis, i) => {
-            const Icon = icons[i] ?? Dna;
+            const Icon = icons[i] ?? Bug;
             return (
               <Link
                 key={axis.id}
-                href={`/${locale}/research`}
+                href={`/${locale}/research#${axis.id}`}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_30px_rgba(20,32,51,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-teal/30 hover:shadow-[0_16px_40px_rgba(15,127,120,0.1)]"
               >
                 <div

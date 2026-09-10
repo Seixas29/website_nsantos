@@ -46,6 +46,24 @@ export function SiteFooter({
                 </Link>
               </li>
             ))}
+            {(
+              [
+                siteConfig.external.insectary,
+                siteConfig.external.surveillance,
+                siteConfig.external.onevec,
+              ] as const
+            ).map((hub) => (
+              <li key={hub.url}>
+                <a
+                  href={hub.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-teal-soft"
+                >
+                  {hub[locale]}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
