@@ -545,7 +545,7 @@ export const publications = [
 
 export const stats = [
   { value: 14, suffix: "", label: { en: "Research areas", pt: "Áreas de investigação" } },
-  { value: 100, suffix: "+", label: { en: "Publications", pt: "Publicações" } },
+  { value: 200, suffix: "+", label: { en: "Publications", pt: "Publicações" } },
   { value: 6, suffix: "", label: { en: "Active projects", pt: "Projetos ativos" } },
   { value: 5, suffix: "", label: { en: "Awards", pt: "Prémios" } },
 ] as const;
