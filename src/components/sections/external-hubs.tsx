@@ -26,7 +26,7 @@ export function ExternalHubs({
   ];
 
   return (
-    <section className="border-t border-line py-20 md:py-28">
+    <section id="hubs" className="scroll-mt-24 border-t border-line py-20 md:py-28">
       <div className="mx-auto w-full max-w-7xl px-6">
         <div className="mb-12 max-w-2xl">
           <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-teal">

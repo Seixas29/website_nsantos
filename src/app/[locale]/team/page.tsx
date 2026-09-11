@@ -5,6 +5,7 @@ import { team } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata({
@@ -47,6 +48,20 @@ export default async function TeamPage({
           label: t(dict, "team.ctaButton"),
         }}
       />
+
+      <section className="border-b border-line bg-surface">
+        <div className="mx-auto w-full max-w-7xl px-6 py-4">
+          <p className="text-sm leading-relaxed text-ink/60">
+            {t(dict, "team.platformsNote")}{" "}
+            <Link
+              href={`/${locale}#hubs`}
+              className="font-medium text-teal underline-offset-4 hover:underline"
+            >
+              {t(dict, "team.platformsLink")}
+            </Link>
+          </p>
+        </div>
+      </section>
 
       {featured && (
         <section className="border-b border-line bg-surface">

@@ -371,14 +371,6 @@ export const team = [
     photo: "/team/catarina.jpg",
   },
   {
-    name: "Maria João Sarmento",
-    role: { en: "Postdoctoral Researcher", pt: "Investigadora Pós-Doutorado" },
-    bio: {
-      en: "Nuclear biomechanics and ageing — coordinator of NucLeAR.",
-      pt: "Biomecânica nuclear e envelhecimento — coordenadora do NucLeAR.",
-    },
-  },
-  {
     name: "Joana Ricardo",
     role: { en: "Manager", pt: "Gestora" },
     bio: {
@@ -397,11 +389,11 @@ export const team = [
     photo: "/team/beatriz.jpg",
   },
   {
-    name: "Inês Saraiva",
+    name: "Andreia Cardetas",
     role: { en: "PhD Student", pt: "Estudante de Doutoramento" },
     bio: {
-      en: "Doctoral research in membrane biophysics and host–pathogen interactions.",
-      pt: "Investigação de doutoramento em biofísica de membranas e interações hospedeiro–patógeno.",
+      en: "PhD student in the Biomembranes and Nanomedicine laboratory.",
+      pt: "Estudante de doutoramento no laboratório de Biomembranas e Nanomedicina.",
     },
   },
   {
@@ -414,55 +406,40 @@ export const team = [
     photo: "/team/Rita.png",
   },
   {
-    name: "Eva Dias",
-    role: { en: "MSc Student", pt: "Estudante de Mestrado" },
+    name: "Tiago Melo",
+    role: { en: "PhD Student", pt: "Estudante de Doutoramento" },
     bio: {
-      en: "Master’s research on antivirals targeting flaviviruses and vector-borne outbreaks.",
-      pt: "Investigação de mestrado em antivirais contra flavivírus e surtos transmitidos por vetores.",
+      en: "Wolbachia in Aedes and Culex mosquitoes from field and insectary strains.",
+      pt: "Wolbachia em mosquitos Aedes e Culex de campo e de colónia.",
+    },
+    photo: "/team/Tiago.jpg",
+  },
+  {
+    name: "Eva Dias",
+    role: { en: "PhD Student", pt: "Estudante de Doutoramento" },
+    bio: {
+      en: "PhD research on antivirals targeting flaviviruses and vector-borne outbreaks.",
+      pt: "Investigação de doutoramento em antivirais contra flavivírus e surtos transmitidos por vetores.",
     },
     photo: "/team/Eva.jpg",
   },
   {
     name: "Renata Matinhos",
-    role: { en: "MSc Student", pt: "Estudante de Mestrado" },
+    role: { en: "PhD Student", pt: "Estudante de Doutoramento" },
     bio: {
-      en: "Master’s research within the lab’s biomembranes and infection programmes.",
-      pt: "Investigação de mestrado nos programas de biomembranas e infeção do laboratório.",
+      en: "PhD research on influenza A and respiratory viruses.",
+      pt: "Investigação de doutoramento em influenza A e vírus respiratórios.",
     },
     photo: "/team/Renata.png",
   },
   {
     name: "Tomás Vieira",
-    role: { en: "MSc Student", pt: "Estudante de Mestrado" },
+    role: { en: "PhD Student", pt: "Estudante de Doutoramento" },
     bio: {
-      en: "Master’s research on biophysical properties of antimicrobial peptides.",
-      pt: "Investigação de mestrado nas propriedades biofísicas de péptidos antimicrobianos.",
+      en: "PhD research on peptides and bacteria.",
+      pt: "Investigação de doutoramento em péptidos e bactérias.",
     },
     photo: "/team/Tomas.jpg",
-  },
-  {
-    name: "Constança Cachorreiro",
-    role: { en: "MSc Student", pt: "Estudante de Mestrado" },
-    bio: {
-      en: "Master’s research within the lab’s biomembranes and nanomedicine programmes.",
-      pt: "Investigação de mestrado nos programas de biomembranas e nanomedicina do laboratório.",
-    },
-  },
-  {
-    name: "João Magueijo",
-    role: { en: "MSc Student", pt: "Estudante de Mestrado" },
-    bio: {
-      en: "Master’s research in molecular biophysics and infection biology.",
-      pt: "Investigação de mestrado em biofísica molecular e biologia da infeção.",
-    },
-  },
-  {
-    name: "Xenia Marques",
-    role: { en: "MSc Student", pt: "Estudante de Mestrado" },
-    bio: {
-      en: "Master’s research contributing to the lab’s translational projects.",
-      pt: "Investigação de mestrado nos projetos translacionais do laboratório.",
-    },
   },
 ] as const;
 

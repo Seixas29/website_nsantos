@@ -67,7 +67,9 @@
     "lead": "Researchers, students and staff across biomembranes, nanomedicine and vector biology at GIMM.",
     "ctaTitle": "Interested in joining the lab?",
     "ctaLead": "Reach out for collaborations, student opportunities, or research enquiries.",
-    "ctaButton": "Get in touch"
+    "ctaButton": "Get in touch",
+    "platformsNote": "The insectary, ovitrap network and OneVec are platforms of this group.",
+    "platformsLink": "See the platforms →"
   },
   "publications": {
     "eyebrow": "Publications",
