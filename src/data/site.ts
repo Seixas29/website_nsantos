@@ -445,6 +445,74 @@ export const team = [
 
 export const publications = [
   {
+    authors: "Silva IC, de Almeida MP, Pereira E, et al.",
+    year: 2026,
+    title:
+      "Enhanced anticancer efficacy of Pa-MAP 1.9 peptide-coated silver nanostars on breast cancer cells",
+    journal: "Materials Today Bio",
+    doi: "10.1016/j.mtbio.2026.103573",
+  },
+  {
+    authors: "Pereira AR, Di Francescantonio S, da Rosa Soares A, et al.",
+    year: 2026,
+    title: "The actomyosin cortex controls t-tubule remodeling in skeletal muscle",
+    journal: "Science Advances",
+    doi: "10.1126/sciadv.aeb3209",
+  },
+  {
+    authors: "Pellequer JL, Aguayo S, Alessandrini A, et al.",
+    year: 2026,
+    title: "A FAIR road to a bioAFM databank",
+    journal: "Nature Methods",
+    doi: "10.1038/s41592-026-03214-7",
+  },
+  {
+    authors: "Silva NM, Martins AS, Karguth NE, et al.",
+    year: 2026,
+    title: "Dengue Virus Capsid Protein Interaction With Nucleic Acids",
+    journal: "BioFactors",
+    doi: "10.1002/biof.70105",
+  },
+  {
+    authors: "Martins ASG, Reis SD, Baboi R, et al.",
+    year: 2026,
+    title:
+      "Dynamics of an RNase H-Responsive Tetrahedral DNA Nanostructure for Efficient Intracellular microRNA Inhibition",
+    journal: "Bioconjugate Chemistry",
+    doi: "10.1021/acs.bioconjchem.5c00563",
+  },
+  {
+    authors: "Pimpão C, Carvalho FA, da Silva IV, et al.",
+    year: 2026,
+    title:
+      "Aquaporin-1, aquaporin-3 and aquaporin-5 differentially modulate cell biophysical and biomechanical properties, impacting cell stiffness and cell–cell adhesion",
+    journal: "FEBS Journal",
+    doi: "10.1111/febs.70269",
+  },
+  {
+    authors: "Alves C, Soares-Castro P, Fernandes RDV, et al.",
+    year: 2025,
+    title:
+      "Application of Prodigiosin Extracts in Textile Dyeing and Novel Printing Processes for Halochromic and Antimicrobial Wound Dressings",
+    journal: "Biomolecules",
+    doi: "10.3390/biom15081113",
+  },
+  {
+    authors: "Fernandes R, Melo T, Zá-Zé L, et al.",
+    year: 2025,
+    title:
+      "Wolbachia Screening in Aedes aegypti and Culex pipiens Mosquitoes from Madeira Island, Portugal",
+    journal: "Insects",
+    doi: "10.3390/insects16040418",
+  },
+  {
+    authors: "Matias Z, Lopes CS, Santos NC, Carvalho FA",
+    year: 2025,
+    title: "Nanotechnology meets medicine: applications of atomic force microscopy in disease",
+    journal: "Biophysical Reviews",
+    doi: "10.1007/s12551-025-01306-w",
+  },
+  {
     authors: "Martins AS, Carvalho FA, Nascimento AR, et al.",
     year: 2024,
     title: "Zika virus capsid protein closed structure modulates binding to host lipid systems",
