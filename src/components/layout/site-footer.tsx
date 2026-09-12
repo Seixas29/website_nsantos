@@ -1,3 +1,4 @@
+import { FmulLogo } from "@/components/brand/fmul-logo";
 import { GimmLogo } from "@/components/brand/gimm-logo";
 import { NsMark } from "@/components/brand/ns-mark";
 import { navLinks, siteConfig } from "@/data/site";
@@ -102,20 +103,30 @@ export function SiteFooter({
               </li>
             ))}
           </ul>
-          <a
-            href="https://gimm.pt/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block opacity-90 transition-opacity hover:opacity-100"
-          >
-            <GimmLogo
-              variant="horizontal"
-              width={160}
-              height={42}
-              onDarkSurface
-              className="h-9"
-            />
-          </a>
+          <div className="flex flex-col items-start gap-5">
+            <a
+              href="https://gimm.pt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block opacity-90 transition-opacity hover:opacity-100"
+            >
+              <GimmLogo
+                variant="horizontal"
+                width={160}
+                height={42}
+                onDarkSurface
+                className="h-9"
+              />
+            </a>
+            <a
+              href="https://www.medicina.ulisboa.pt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block opacity-90 transition-opacity hover:opacity-100"
+            >
+              <FmulLogo width={440} height={100} onDarkSurface className="h-10" />
+            </a>
+          </div>
         </div>
       </div>
 

@@ -36,12 +36,12 @@ export function PartnersMarquee({ label }: { label: string }) {
                   <Image
                     src={partner.src}
                     alt={partner.name}
-                    width={140}
-                    height={36}
+                    width={220}
+                    height={50}
                     unoptimized
                     className={cn(
                       "h-7 w-auto max-w-[140px] object-contain",
-                      partner.id === "fmul" && "h-8",
+                      partner.id === "fmul" && "h-8 max-w-[220px]",
                       partner.id === "lacaixa" && "h-6",
                       partner.id === "horizon" && "h-8 max-w-[168px]",
                     )}

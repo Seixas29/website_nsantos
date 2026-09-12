@@ -1,3 +1,4 @@
+import { FmulLogo } from "@/components/brand/fmul-logo";
 import { GimmLogo } from "@/components/brand/gimm-logo";
 import { PageHero } from "@/components/layout/page-hero";
 import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
@@ -89,19 +90,29 @@ export default async function ContactPage({
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-teal">
                 {t(dict, "contact.affiliations")}
               </p>
-              <a
-                href="https://gimm.pt/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-block opacity-90 transition-opacity hover:opacity-100"
-              >
-                <GimmLogo
-                  variant="horizontal"
-                  width={160}
-                  height={42}
-                  className="h-9"
-                />
-              </a>
+              <div className="mt-5 flex flex-col items-start gap-5">
+                <a
+                  href="https://gimm.pt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block opacity-90 transition-opacity hover:opacity-100"
+                >
+                  <GimmLogo
+                    variant="horizontal"
+                    width={160}
+                    height={42}
+                    className="h-9"
+                  />
+                </a>
+                <a
+                  href="https://www.medicina.ulisboa.pt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block opacity-90 transition-opacity hover:opacity-100"
+                >
+                  <FmulLogo width={440} height={100} className="h-10" />
+                </a>
+              </div>
               <ul className="mt-6 space-y-3">
                 {siteConfig.affiliations.map((a) => (
                   <li key={a.name}>

@@ -617,7 +617,7 @@ export const partners = [
   {
     id: "fmul",
     name: "Faculdade de Medicina da Universidade de Lisboa",
-    src: "/images/partners/fmul.png",
+    src: "/images/partners/fmul-neg.png",
     url: "https://www.medicina.ulisboa.pt/",
   },
   {
