@@ -74,8 +74,9 @@
   "publications": {
     "eyebrow": "Publications",
     "title": "Selected papers",
-    "lead": "A curated selection from the laboratory. Full lists are available via the GIMM lab page and institutional repositories.",
+    "lead": "A curated selection from the laboratory. The full record is on Nuno Santos' ORCID.",
     "viewDoi": "View DOI",
+    "orcidCta": "ORCID record",
     "ctaTitle": "Explore related research",
     "ctaLead": "See active projects, focus themes, and collaborations across the lab.",
     "ctaButton": "View research"
@@ -86,6 +87,7 @@
     "lead": "For collaborations, student opportunities, or press enquiries.",
     "email": "Email",
     "emailCta": "Send email",
+    "orcid": "ORCID",
     "address": "Address",
     "affiliations": "Affiliations",
     "gimmPage": "GIMM lab page",

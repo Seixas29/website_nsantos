@@ -19,8 +19,15 @@ function HeroLink({
     href.startsWith("tel:");
 
   if (external) {
+    const newTab = href.startsWith("http");
     return (
-      <a href={href} className={className}>
+      <a
+        href={href}
+        className={className}
+        {...(newTab
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
+      >
         {children}
       </a>
     );

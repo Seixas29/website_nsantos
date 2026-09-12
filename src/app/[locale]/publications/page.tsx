@@ -1,6 +1,6 @@
 import { PageHero } from "@/components/layout/page-hero";
 import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
-import { publications } from "@/data/site";
+import { publications, siteConfig } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
 import { ArrowUpRight } from "lucide-react";
@@ -42,6 +42,10 @@ export default async function PublicationsPage({
         primaryCta={{
           href: `/${locale}/research`,
           label: t(dict, "publications.ctaButton"),
+        }}
+        secondaryCta={{
+          href: siteConfig.social.orcid.url,
+          label: t(dict, "publications.orcidCta"),
         }}
       />
 

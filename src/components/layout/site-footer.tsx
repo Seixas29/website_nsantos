@@ -1,6 +1,7 @@
 import { FmulLogo } from "@/components/brand/fmul-logo";
 import { GimmLogo } from "@/components/brand/gimm-logo";
 import { NsMark } from "@/components/brand/ns-mark";
+import { OrcidLink } from "@/components/brand/orcid-link";
 import { navLinks, siteConfig } from "@/data/site";
 import type { Locale } from "@/i18n/config";
 import Link from "next/link";
@@ -80,6 +81,9 @@ export function SiteFooter({
               >
                 {siteConfig.email}
               </a>
+            </li>
+            <li>
+              <OrcidLink tone="dark" />
             </li>
             <li className="leading-relaxed">{siteConfig.address[locale]}</li>
           </ul>

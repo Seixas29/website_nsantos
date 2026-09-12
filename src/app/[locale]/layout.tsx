@@ -1,6 +1,7 @@
 import { DocumentLang } from "@/components/i18n/document-lang";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { LabJsonLd } from "@/components/seo/lab-json-ld";
 import { siteConfig } from "@/data/site";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
@@ -34,6 +35,15 @@ export async function generateMetadata({
       locale: locale === "pt" ? "pt_PT" : "en_GB",
       type: "website",
     },
+    authors: [
+      {
+        name: "Nuno C. Santos",
+        url: siteConfig.social.orcid.url,
+      },
+    ],
+    other: {
+      "citation_author_orcid": siteConfig.social.orcid.id,
+    },
   };
 }
 
@@ -51,6 +61,7 @@ export default async function LocaleLayout({
 
   return (
     <div className="flex min-h-full flex-col">
+      <LabJsonLd />
       <DocumentLang locale={locale} />
       <SiteHeader locale={locale} />
       <main className="flex-1">{children}</main>

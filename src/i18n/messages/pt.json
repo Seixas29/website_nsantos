@@ -74,8 +74,9 @@
   "publications": {
     "eyebrow": "Publicações",
     "title": "Artigos selecionados",
-    "lead": "Uma seleção do laboratório. Listas completas estão disponíveis na página GIMM e repositórios institucionais.",
+    "lead": "Uma seleção do laboratório. O registo completo está no ORCID de Nuno Santos.",
     "viewDoi": "Ver DOI",
+    "orcidCta": "Registo ORCID",
     "ctaTitle": "Explorar a investigação relacionada",
     "ctaLead": "Veja projetos ativos, temas em foco e colaborações do laboratório.",
     "ctaButton": "Ver investigação"
@@ -86,6 +87,7 @@
     "lead": "Para colaborações, oportunidades para estudantes ou pedidos de imprensa.",
     "email": "Email",
     "emailCta": "Enviar email",
+    "orcid": "ORCID",
     "address": "Morada",
     "affiliations": "Afiliações",
     "gimmPage": "Página do laboratório no GIMM",

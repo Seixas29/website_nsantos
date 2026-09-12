@@ -1,5 +1,7 @@
 import { FmulLogo } from "@/components/brand/fmul-logo";
 import { GimmLogo } from "@/components/brand/gimm-logo";
+import { OrcidIcon } from "@/components/brand/orcid-icon";
+import { OrcidLink } from "@/components/brand/orcid-link";
 import { PageHero } from "@/components/layout/page-hero";
 import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
 import { Button, ButtonIcon } from "@/components/ui/button";
@@ -72,6 +74,16 @@ export default async function ContactPage({
                   </ButtonIcon>
                 </a>
               </Button>
+            </div>
+
+            <div className="mt-12">
+              <span className="mb-5 flex h-11 w-11 items-center justify-center rounded-full bg-teal/10">
+                <OrcidIcon className="h-6 w-6" />
+              </span>
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-teal">
+                {t(dict, "contact.orcid")}
+              </p>
+              <OrcidLink className="mt-3 text-lg md:text-xl" />
             </div>
           </div>
 

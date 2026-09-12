@@ -69,7 +69,12 @@ export const siteConfig = {
     gimmLab:
       "https://gimm.pt/pt-pt/o-nosso-trabalho/laboratorios/laboratorio-nuno-santos/",
   },
-  social: {},
+  social: {
+    orcid: {
+      id: "0000-0002-0580-0475",
+      url: "https://orcid.org/0000-0002-0580-0475",
+    },
+  },
 } as const;
 
 export const navLinks = [

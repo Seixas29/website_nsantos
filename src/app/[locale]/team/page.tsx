@@ -1,3 +1,4 @@
+import { OrcidLink } from "@/components/brand/orcid-link";
 import { PageHero } from "@/components/layout/page-hero";
 import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
 import { TeamPhoto } from "@/components/ui/team-photo";
@@ -83,6 +84,7 @@ export default async function TeamPage({
               <p className="mt-4 text-base leading-relaxed text-ink/55 md:text-lg">
                 {featured.bio[locale]}
               </p>
+              <OrcidLink className="mt-6" showLabel />
             </div>
           </div>
         </section>
