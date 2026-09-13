@@ -53,8 +53,8 @@ export const siteConfig = {
       pt: "Rede de ovitrampas",
       url: "https://gimm-ovitrap-network.vercel.app/",
       blurb: {
-        en: "Field ovitrap surveillance for invasive Aedes in Portugal — GIMM / FMUL.",
-        pt: "Vigilância de campo com ovitrampas para Aedes invasores em Portugal — GIMM / FMUL.",
+        en: "Field ovitrap surveillance for invasive Aedes in Portugal, from egg collections to laboratory identification — GIMM / FMUL.",
+        pt: "Vigilância de campo com ovitrampas para Aedes invasores em Portugal, da recolha de ovos à identificação em laboratório — GIMM / FMUL.",
       },
     },
     onevec: {
@@ -106,8 +106,8 @@ export const researchAxes = [
     id: "infectious-diseases",
     title: { en: "Infectious diseases", pt: "Doenças infecciosas" },
     description: {
-      en: "Viral entry and assembly at host membranes — HIV-1, dengue and related flaviviruses — plus the Aedes pipeline: insectary, Wolbachia, ovitraps and citizen surveillance.",
-      pt: "Entrada e montagem viral nas membranas do hospedeiro — HIV-1, dengue e flavivírus relacionados — e o pipeline Aedes: insetário, Wolbachia, ovitrampas e vigilância cidadã.",
+      en: "Viral entry and assembly at host membranes — HIV-1, dengue and related flaviviruses — from molecular mechanisms to Aedes biology and transmission blocking.",
+      pt: "Entrada e montagem viral nas membranas do hospedeiro — HIV-1, dengue e flavivírus relacionados — dos mecanismos moleculares à biologia de Aedes e ao bloqueio da transmissão.",
     },
   },
   {
