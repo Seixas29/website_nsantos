@@ -10,10 +10,12 @@ export function SiteFooter({
   locale,
   tagline,
   rights,
+  privacy,
 }: {
   locale: Locale;
   tagline: string;
   rights: string;
+  privacy: string;
 }) {
   return (
     <footer className="mt-auto bg-[#0b1118] text-[#e8eef5]">
@@ -135,10 +137,16 @@ export function SiteFooter({
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex w-full max-w-7xl px-6 py-5">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-5">
           <p className="text-xs text-white/35">
             © {new Date().getFullYear()} {siteConfig.name.trim()} · {rights.trim()}
           </p>
+          <Link
+            href={`/${locale}/privacy`}
+            className="text-xs text-white/45 transition-colors hover:text-teal-soft"
+          >
+            {privacy}
+          </Link>
         </div>
       </div>
     </footer>

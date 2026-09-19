@@ -68,7 +68,7 @@
     "ctaTitle": "Interested in joining the lab?",
     "ctaLead": "Reach out for collaborations, student opportunities, or research enquiries.",
     "ctaButton": "Get in touch",
-    "platformsNote": "The insectary, ovitrap network and OneVec are platforms of this group.",
+    "platformsNote": "The insectary, the ovitrap network and OneVec are platforms of this group.",
     "platformsLink": "See the platforms →"
   },
   "publications": {
@@ -95,8 +95,19 @@
     "ctaLead": "Browse focus themes, active projects, and recent awards.",
     "ctaButton": "View research"
   },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Privacy",
+    "lead": "This site is a laboratory brochure. It does not use analytics cookies, does not create accounts, and does not run a contact form.",
+    "whatTitle": "What this site does",
+    "whatBody": "Pages are static. Optional theme preference is stored in your browser (localStorage). Outbound links go to GIMM, FMUL, ORCID, and the lab’s platforms (insectary, ovitrap network, OneVec).",
+    "contactTitle": "Contact",
+    "contactBody": "For privacy questions about this brochure, email the group leader. OneVec, the insectary and the ovitrap network have their own privacy notices.",
+    "emailCta": "Email the lab"
+  },
   "footer": {
     "tagline": "Biomembranes · Nanomedicine at GIMM",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "privacy": "Privacy"
   }
 }

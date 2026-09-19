@@ -12,16 +12,9 @@ import {
 } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
-import { Bug, Dna, HeartPulse, Ribbon } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-
-const axisIcons = [Bug, HeartPulse, Ribbon] as const;
-const axisAccents = [
-  "from-[#0b3d3a] via-[#0f7f78] to-[#3db8ae]",
-  "from-[#0a2a3a] via-[#1a6b8a] to-[#3db8ae]",
-  "from-[#0d2f2c] via-[#12706a] to-[#7ec8c2]",
-] as const;
 
 export async function generateMetadata({
   params,
@@ -105,32 +98,24 @@ export default async function ResearchPage({
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {researchAxes.map((axis, i) => {
-              const Icon = axisIcons[i] ?? Dna;
-              const accent = axisAccents[i] ?? axisAccents[0];
               return (
                 <article
                   id={axis.id}
                   key={axis.id}
                   className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_8px_30px_rgba(20,32,51,0.04)] scroll-mt-28 transition-all duration-500 hover:-translate-y-1 hover:border-teal/30 hover:shadow-[0_16px_40px_rgba(15,127,120,0.1)]"
                 >
-                  <div
-                    className={`relative flex h-44 items-center justify-center overflow-hidden bg-linear-to-br ${accent}`}
-                  >
-                    <div
-                      aria-hidden
-                      className="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,0.35)_1px,transparent_1px)] [background-size:18px_18px]"
+                  <div className="relative h-44 overflow-hidden bg-[#0b1118]">
+                    <Image
+                      src={axis.photo}
+                      alt={axis.photoAlt[locale]}
+                      fill
+                      sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 100vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                     />
                     <div
                       aria-hidden
-                      className="absolute -right-8 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl transition-transform duration-700 group-hover:scale-125"
+                      className="absolute inset-0 bg-linear-to-t from-ink/35 via-transparent to-black/10"
                     />
-                    <div
-                      aria-hidden
-                      className="absolute -bottom-12 -left-6 h-36 w-36 rounded-full bg-black/20 blur-2xl"
-                    />
-                    <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-white/12 ring-1 ring-white/25 backdrop-blur-sm transition-transform duration-500 group-hover:scale-105">
-                      <Icon className="h-10 w-10 text-white" strokeWidth={1.4} />
-                    </div>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <p className="font-mono text-[11px] tracking-[0.18em] text-teal">

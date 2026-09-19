@@ -34,6 +34,21 @@ export async function generateMetadata({
       description: siteConfig.description[locale],
       locale: locale === "pt" ? "pt_PT" : "en_GB",
       type: "website",
+      url: `https://nsantos.vercel.app/${locale}`,
+      images: [
+        {
+          url: "/brand/og.png",
+          width: 1200,
+          height: 630,
+          alt: "Nuno Santos Lab — GIMM",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${siteConfig.name} | GIMM`,
+      description: siteConfig.description[locale],
+      images: ["/brand/og.png"],
     },
     authors: [
       {
@@ -69,6 +84,7 @@ export default async function LocaleLayout({
         locale={locale}
         tagline={t(dict, "footer.tagline")}
         rights={t(dict, "footer.rights")}
+        privacy={t(dict, "footer.privacy")}
       />
     </div>
   );

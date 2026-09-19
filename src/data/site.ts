@@ -13,12 +13,12 @@ export const siteConfig = {
     en: [
       "We investigate biochemical and biophysical processes at the membranes of human cells and of their viral and bacterial pathogens. A core focus is the two stages of the enveloped-virus life cycle that involve biomembranes — entry of the virus or its contents into the target cell, and formation of new virions — with emphasis on HIV-1 and dengue virus. We also study fibrinogen binding to the erythrocyte membrane and its relevance as a cardiovascular risk factor.",
       "We perform preclinical evaluation of membrane activity and molecular mechanisms of action of antimicrobial peptides (AMPs) and cell-penetrating peptides (CPPs). In nanotechnology and nanomedicine, we develop innovative biosensor systems with improved selectivity and sensitivity, including nanoparticles and amyloid-based biosensors.",
-      "Within infectious diseases we also run an Aedes programme: an ACL-2 insectary, field ovitrap surveillance, citizen reports (OneVec, with Universidade Lusófona FMV), and Wolbachia methods in Aedes aegypti aimed at blocking virus transmission.",
+      "Within infectious diseases we also run an Aedes programme: an ACL-2 insectary, field ovitrap surveillance, OneVec (a citizen platform of this lab, with support from Universidade Lusófona FMV and GIMM), and Wolbachia methods in Aedes aegypti aimed at blocking virus transmission.",
     ],
     pt: [
       "Processos bioquímicos e biofísicos que ocorrem ao nível das membranas das células humanas, bem como dos seus agentes patogénicos virais e bacterianos. Estudo das duas etapas do ciclo de vida dos vírus envelopados (principalmente HIV-1 e vírus da dengue) que envolvem biomembranas — a entrada do vírus ou do seu conteúdo na célula-alvo e a formação de novos viriões. Estudo da ligação do fibrinogénio à membrana eritrocitária e da sua importância como fator de risco cardiovascular.",
       "Avaliação pré-clínica da atividade membranar e do mecanismo de ação a nível molecular dos péptidos antimicrobianos (AMP) e dos péptidos de penetração celular (CPP). Na área da Nanotecnologia/Nanomedicina, estamos também a trabalhar no desenvolvimento de sistemas inovadores de biossensores, com maior seletividade e sensibilidade (por exemplo, nanopartículas e biossensores baseados em amiloide).",
-      "Nas doenças infecciosas mantemos também um programa Aedes: insetário ACL-2, vigilância de campo com ovitrampas, reportes cidadãos (OneVec, com a Universidade Lusófona FMV) e métodos de Wolbachia em Aedes aegypti para bloquear a transmissão viral.",
+      "Nas doenças infecciosas mantemos também um programa Aedes: insetário ACL-2, vigilância de campo com ovitrampas, OneVec (plataforma cidadã deste laboratório, com apoio da Universidade Lusófona FMV e do GIMM) e métodos de Wolbachia em Aedes aegypti para bloquear a transmissão viral.",
     ],
   },
   email: "nuno.santos@gimm.pt",
@@ -53,8 +53,8 @@ export const siteConfig = {
       pt: "Rede de ovitrampas",
       url: "https://gimm-ovitrap-network.vercel.app/",
       blurb: {
-        en: "Field ovitrap surveillance for invasive Aedes in Portugal, from egg collections to laboratory identification — GIMM / FMUL.",
-        pt: "Vigilância de campo com ovitrampas para Aedes invasores em Portugal, da recolha de ovos à identificação em laboratório — GIMM / FMUL.",
+        en: "Field ovitrap surveillance for invasive Aedes in Portugal, from egg collections to laboratory identification — a platform of this lab, hosted at GIMM/FMUL.",
+        pt: "Vigilância de campo com ovitrampas para Aedes invasores em Portugal, da recolha de ovos à identificação em laboratório — uma plataforma deste laboratório, no GIMM/FMUL.",
       },
     },
     onevec: {
@@ -62,8 +62,8 @@ export const siteConfig = {
       pt: "OneVec",
       url: "https://onevec.vercel.app/",
       blurb: {
-        en: "Citizen One Health surveillance of mosquitoes, ticks, sand flies, fleas and Culicoides — Universidade Lusófona FMV & GIMM.",
-        pt: "Vigilância cidadã One Health de mosquitos, carraças, flebótomos, pulgas e Culicoides — Universidade Lusófona FMV e GIMM.",
+        en: "Citizen One Health surveillance of mosquitoes, ticks, sand flies, fleas and Culicoides — a platform of this lab, with support from Universidade Lusófona FMV and GIMM.",
+        pt: "Vigilância cidadã One Health de mosquitos, carraças, flebótomos, pulgas e Culicoides — uma plataforma deste laboratório, com apoio da Universidade Lusófona FMV e do GIMM.",
       },
     },
     gimmLab:
@@ -109,6 +109,11 @@ export const researchAxes = [
       en: "Viral entry and assembly at host membranes — HIV-1, dengue and related flaviviruses — from molecular mechanisms to Aedes biology and transmission blocking.",
       pt: "Entrada e montagem viral nas membranas do hospedeiro — HIV-1, dengue e flavivírus relacionados — dos mecanismos moleculares à biologia de Aedes e ao bloqueio da transmissão.",
     },
+    photo: "/images/research/infectious.png",
+    photoAlt: {
+      en: "Transmission electron micrograph of flavivirus-like particles at a host membrane",
+      pt: "Micrografia electrónica de transmissão de partículas tipo flavivírus junto à membrana do hospedeiro",
+    },
   },
   {
     id: "cardiovascular",
@@ -117,6 +122,11 @@ export const researchAxes = [
       en: "Fibrinogen–erythrocyte binding and AFM-based tools to read thrombotic and cardiovascular risk, including synthetic-erythrocyte work.",
       pt: "Ligação fibrinogénio–eritrócito e ferramentas de AFM para ler risco trombótico e cardiovascular, incluindo eritrócitos sintéticos.",
     },
+    photo: "/images/research/cardiovascular.png",
+    photoAlt: {
+      en: "Phase-contrast micrograph of human erythrocytes, including rouleaux",
+      pt: "Micrografia de contraste de fase de eritrócitos humanos, incluindo roleaux",
+    },
   },
   {
     id: "cancer",
@@ -124,6 +134,11 @@ export const researchAxes = [
     description: {
       en: "Membrane-active anticancer peptides and cell mechanics in tumour progression, from adhesions to nuclear biophysics.",
       pt: "Péptidos anticancerígenos com atividade membranar e mecânica celular na progressão tumoral, das adesões à biofísica nuclear.",
+    },
+    photo: "/images/research/cancer.png",
+    photoAlt: {
+      en: "Confocal micrograph of epithelial cells with nuclear and actin stains",
+      pt: "Micrografia confocal de células epiteliais com marcação nuclear e de actina",
     },
   },
 ] as const;
@@ -150,8 +165,8 @@ export const vectorBiology = {
       id: "surveillance",
       title: { en: "Surveillance & control", pt: "Vigilância e controlo" },
       body: {
-        en: "Field ovitraps (GIMM/FMUL), SMART-DIET tools for Aedes albopictus, and OneVec citizen reports with Universidade Lusófona FMV.",
-        pt: "Ovitrampas de campo (GIMM/FMUL), ferramentas SMART-DIET para Aedes albopictus e reportes cidadãos OneVec com a Universidade Lusófona FMV.",
+        en: "Field ovitraps hosted at GIMM/FMUL, SMART-DIET tools for Aedes albopictus, and OneVec — this lab’s citizen surveillance platform, with support from Universidade Lusófona FMV.",
+        pt: "Ovitrampas de campo no GIMM/FMUL, ferramentas SMART-DIET para Aedes albopictus e o OneVec — plataforma cidadã deste laboratório, com apoio da Universidade Lusófona FMV.",
       },
     },
   ],
@@ -185,7 +200,7 @@ export const projects = [
       en: "Age-defying nucleus: targeting plasmalogens to reverse age-induced biomechanical decline.",
       pt: "Núcleo sem idade: plasmalogénios para reverter o declínio biomecânico associado ao envelhecimento.",
     },
-    role: { en: "Coordinator: Maria João Sarmento", pt: "Coordenação: Maria João Sarmento" },
+    role: { en: "Coordinator: Nuno Santos", pt: "Coordenação: Nuno Santos" },
     funding: "FCT",
   },
   {
@@ -208,6 +223,9 @@ export const projects = [
     role: { en: "Coordinator: Nuno Santos", pt: "Coordenação: Nuno Santos" },
     funding: "EU HORIZON-EIC Pathfinder (101046894)",
   },
+] as const;
+
+export const previousProjects = [
   {
     years: "2023–2025",
     title: "Res4PrioPath",
@@ -218,9 +236,6 @@ export const projects = [
     role: { en: "Coordinator: Nuno Santos", pt: "Coordenação: Nuno Santos" },
     funding: "EU ISIDORe JRA",
   },
-] as const;
-
-export const previousProjects = [
   {
     years: "2023–2024",
     title: "AMP-AgNP conjugates",
@@ -596,7 +611,7 @@ export const publications = [
 export const stats = [
   { value: 14, suffix: "", label: { en: "Research areas", pt: "Áreas de investigação" } },
   { value: 200, suffix: "+", label: { en: "Publications", pt: "Publicações" } },
-  { value: 6, suffix: "", label: { en: "Active projects", pt: "Projetos ativos" } },
+  { value: 5, suffix: "", label: { en: "Active projects", pt: "Projetos ativos" } },
   { value: 5, suffix: "", label: { en: "Awards", pt: "Prémios" } },
 ] as const;
 

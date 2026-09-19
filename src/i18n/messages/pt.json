@@ -68,7 +68,7 @@
     "ctaTitle": "Interessado em juntar-se ao laboratório?",
     "ctaLead": "Contacte-nos para colaborações, oportunidades para estudantes ou questões de investigação.",
     "ctaButton": "Entrar em contacto",
-    "platformsNote": "O insetário, a rede de ovitraps e o OneVec são plataformas deste grupo.",
+    "platformsNote": "O insetário, a rede de ovitrampas e o OneVec são plataformas deste grupo.",
     "platformsLink": "Ver as plataformas →"
   },
   "publications": {
@@ -95,8 +95,19 @@
     "ctaLead": "Explore temas em foco, projetos ativos e prémios recentes.",
     "ctaButton": "Ver investigação"
   },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Privacidade",
+    "lead": "Este site é um folheto do laboratório. Não usa cookies de análise, não cria contas e não tem formulário de contacto.",
+    "whatTitle": "O que este site faz",
+    "whatBody": "As páginas são estáticas. A preferência de tema opcional fica no seu browser (localStorage). Ligações externas apontam para o GIMM, a FMUL, o ORCID e as plataformas do laboratório (insetário, rede de ovitrampas, OneVec).",
+    "contactTitle": "Contacto",
+    "contactBody": "Para questões de privacidade sobre este folheto, envie email ao líder do grupo. O OneVec, o insetário e a rede de ovitrampas têm avisos de privacidade próprios.",
+    "emailCta": "Email do laboratório"
+  },
   "footer": {
     "tagline": "Biomembranas · Nanomedicina no GIMM",
-    "rights": "Todos os direitos reservados."
+    "rights": "Todos os direitos reservados.",
+    "privacy": "Privacidade"
   }
 }
