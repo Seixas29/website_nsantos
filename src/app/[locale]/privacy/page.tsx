@@ -2,6 +2,7 @@ import { PageHero } from "@/components/layout/page-hero";
 import { siteConfig } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
+import { pageSeo } from "@/lib/page-seo";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -12,13 +13,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = (isLocale(raw) ? raw : "en") as Locale;
-  return {
+  return pageSeo({
+    locale,
+    path: "/privacy",
     title: locale === "pt" ? "Privacidade" : "Privacy",
     description:
       locale === "pt"
-        ? "Aviso de privacidade do site do Laboratório Nuno Santos."
-        : "Privacy notice for the Nuno Santos Lab brochure site.",
-  };
+        ? "Aviso de privacidade do website do Nuno Santos Lab (GIMM)."
+        : "Privacy notice for the Nuno Santos Lab website (GIMM).",
+  });
 }
 
 export default async function PrivacyPage({

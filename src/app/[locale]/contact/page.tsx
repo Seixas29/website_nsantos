@@ -8,6 +8,7 @@ import { Button, ButtonIcon } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
+import { pageSeo } from "@/lib/page-seo";
 import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -19,13 +20,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = (isLocale(raw) ? raw : "en") as Locale;
-  return {
+  return pageSeo({
+    locale,
+    path: "/contact",
     title: locale === "pt" ? "Contacto" : "Contact",
     description:
       locale === "pt"
-        ? "Contactar o Laboratório Nuno Santos no GIMM."
-        : "Contact the Nuno Santos Lab at GIMM.",
-  };
+        ? "Contactar o Nuno Santos Lab no GIMM (Lisboa): email, ORCID e morada no Edifício Egas Moniz."
+        : "Contact the Nuno Santos Lab at GIMM (Lisbon): email, ORCID and address at the Egas Moniz building.",
+  });
 }
 
 export default async function ContactPage({

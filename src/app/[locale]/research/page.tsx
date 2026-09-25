@@ -12,6 +12,7 @@ import {
 } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
+import { pageSeo } from "@/lib/page-seo";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -23,10 +24,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = (isLocale(raw) ? raw : "en") as Locale;
-  return {
+  return pageSeo({
+    locale,
+    path: "/research",
     title: locale === "pt" ? "Investigação" : "Research",
-    description: siteConfig.description[locale],
-  };
+    description:
+      locale === "pt"
+        ? "Eixos de investigação do Nuno Santos Lab: doenças infecciosas, cardiovascular, cancro, biologia de vetores Aedes e Wolbachia no GIMM."
+        : "Nuno Santos Lab research axes: infectious diseases, cardiovascular, cancer, Aedes vector biology and Wolbachia at GIMM.",
+  });
 }
 
 export default async function ResearchPage({

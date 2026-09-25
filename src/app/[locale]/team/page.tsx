@@ -5,6 +5,7 @@ import { TeamPhoto } from "@/components/ui/team-photo";
 import { team } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
+import { pageSeo } from "@/lib/page-seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -16,13 +17,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = (isLocale(raw) ? raw : "en") as Locale;
-  return {
+  return pageSeo({
+    locale,
+    path: "/team",
     title: locale === "pt" ? "Equipa" : "Team",
     description:
       locale === "pt"
-        ? "Equipa do Laboratório Nuno Santos no GIMM."
-        : "Nuno Santos Lab team at GIMM.",
-  };
+        ? "Equipa do Nuno Santos Lab no GIMM: biomembranas, nanomedicina, Aedes e Wolbachia. Investigadores, pós-docs e estudantes."
+        : "Nuno Santos Lab team at GIMM: biomembranes, nanomedicine, Aedes and Wolbachia. Researchers, postdocs and students.",
+  });
 }
 
 export default async function TeamPage({

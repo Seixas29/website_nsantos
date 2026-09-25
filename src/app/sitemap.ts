@@ -4,25 +4,21 @@ import { locales } from "@/i18n/config";
 const BASE = "https://nsantos.vercel.app";
 
 const pages = [
-  { path: "", priority: 1 },
-  { path: "/research", priority: 0.9 },
-  { path: "/team", priority: 0.8 },
-  { path: "/publications", priority: 0.8 },
-  { path: "/contact", priority: 0.7 },
-  { path: "/privacy", priority: 0.4 },
+  { path: "", lastModified: new Date("2026-09-20") },
+  { path: "/research", lastModified: new Date("2026-09-20") },
+  { path: "/team", lastModified: new Date("2026-09-19") },
+  { path: "/publications", lastModified: new Date("2026-09-19") },
+  { path: "/contact", lastModified: new Date("2026-09-19") },
+  { path: "/privacy", lastModified: new Date("2026-09-19") },
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-09-19");
-
-  return pages.flatMap(({ path, priority }) =>
+  return pages.flatMap(({ path, lastModified }) =>
     locales.map((locale) => {
       const url = `${BASE}/${locale}${path}`;
       return {
         url,
         lastModified,
-        changeFrequency: path === "" ? "weekly" : "monthly",
-        priority,
         alternates: {
           languages: {
             en: `${BASE}/en${path}`,

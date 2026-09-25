@@ -5,6 +5,7 @@ import { LabJsonLd } from "@/components/seo/lab-json-ld";
 import { siteConfig } from "@/data/site";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
+import { pageSeo } from "@/lib/page-seo";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -21,35 +22,13 @@ export async function generateMetadata({
   const locale = (isLocale(raw) ? raw : "en") as Locale;
 
   return {
-    title: { absolute: `${siteConfig.name} | GIMM` },
-    description: siteConfig.description[locale],
-    alternates: {
-      languages: {
-        en: "/en",
-        pt: "/pt",
-      },
-    },
-    openGraph: {
+    ...pageSeo({
+      locale,
+      path: "",
       title: `${siteConfig.name} | GIMM`,
       description: siteConfig.description[locale],
-      locale: locale === "pt" ? "pt_PT" : "en_GB",
-      type: "website",
-      url: `https://nsantos.vercel.app/${locale}`,
-      images: [
-        {
-          url: "/brand/og.png",
-          width: 1200,
-          height: 630,
-          alt: "Nuno Santos Lab — GIMM",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${siteConfig.name} | GIMM`,
-      description: siteConfig.description[locale],
-      images: ["/brand/og.png"],
-    },
+      absolute: true,
+    }),
     authors: [
       {
         name: "Nuno C. Santos",
@@ -57,7 +36,7 @@ export async function generateMetadata({
       },
     ],
     other: {
-      "citation_author_orcid": siteConfig.social.orcid.id,
+      citation_author_orcid: siteConfig.social.orcid.id,
     },
   };
 }

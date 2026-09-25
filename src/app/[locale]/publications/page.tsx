@@ -3,6 +3,7 @@ import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
 import { publications, siteConfig } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
+import { pageSeo } from "@/lib/page-seo";
 import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -14,13 +15,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = (isLocale(raw) ? raw : "en") as Locale;
-  return {
+  return pageSeo({
+    locale,
+    path: "/publications",
     title: locale === "pt" ? "Publicações" : "Publications",
     description:
       locale === "pt"
-        ? "Publicações selecionadas do Laboratório Nuno Santos."
-        : "Selected publications from the Nuno Santos Lab.",
-  };
+        ? "Publicações selecionadas do Nuno Santos Lab (GIMM): biofísica de membranas, flavivírus, AFM, péptidos e biologia de vetores."
+        : "Selected publications from the Nuno Santos Lab (GIMM): membrane biophysics, flaviviruses, AFM, peptides and vector biology.",
+  });
 }
 
 export default async function PublicationsPage({

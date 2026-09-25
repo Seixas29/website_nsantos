@@ -7,6 +7,7 @@ import { StatsBand } from "@/components/sections/stats-band";
 import { siteConfig } from "@/data/site";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary, t } from "@/i18n/get-dictionary";
+import { pageSeo } from "@/lib/page-seo";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -17,10 +18,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = (isLocale(raw) ? raw : "en") as Locale;
-  return {
-    title: { absolute: `${siteConfig.name} | GIMM` },
+  return pageSeo({
+    locale,
+    path: "",
+    title: `${siteConfig.name} | GIMM`,
     description: siteConfig.description[locale],
-  };
+    absolute: true,
+  });
 }
 
 export default async function HomePage({
