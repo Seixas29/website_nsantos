@@ -7,21 +7,24 @@ import { useCallback, useEffect, useState } from "react";
 
 const SLIDES = [
   {
-    src: "/images/outreach/nei-duo-cage.png",
-    alt: {
-      en: "Eva Dias and Tomás Vieira at European Researchers’ Night 2026",
-      pt: "Eva Dias e Tomás Vieira na Noite Europeia dos Investigadores 2026",
-    },
-  },
-  {
     src: "/images/outreach/nei-duo-smile.png",
+    fit: "top" as const,
     alt: {
       en: "Eva Dias and Tomás Vieira representing the Nuno Santos Lab",
       pt: "Eva Dias e Tomás Vieira a representar o Nuno Santos Lab",
     },
   },
   {
+    src: "/images/outreach/nei-duo-cage.png",
+    fit: "top" as const,
+    alt: {
+      en: "Eva Dias and Tomás Vieira at European Researchers’ Night 2026",
+      pt: "Eva Dias e Tomás Vieira na Noite Europeia dos Investigadores 2026",
+    },
+  },
+  {
     src: "/images/outreach/nei-demo.png",
+    fit: "center" as const,
     alt: {
       en: "Tomás Vieira demonstrating a sample to a visitor",
       pt: "Tomás Vieira a demonstrar uma amostra a uma visitante",
@@ -29,6 +32,7 @@ const SLIDES = [
   },
   {
     src: "/images/outreach/nei-activity.png",
+    fit: "center" as const,
     alt: {
       en: "Eva Dias with a young visitor at the interactive booth",
       pt: "Eva Dias com um visitante jovem no stand interativo",
@@ -36,6 +40,7 @@ const SLIDES = [
   },
   {
     src: "/images/outreach/nei-table.jpg",
+    fit: "center" as const,
     alt: {
       en: "Outreach table with mosquito samples and microscope",
       pt: "Mesa de divulgação com amostras de mosquitos e microscópio",
@@ -43,6 +48,7 @@ const SLIDES = [
   },
   {
     src: "/images/outreach/nei-booth.jpg",
+    fit: "center" as const,
     alt: {
       en: "Lab outreach booth at European Researchers’ Night",
       pt: "Stand do laboratório na Noite Europeia dos Investigadores",
@@ -52,13 +58,15 @@ const SLIDES = [
 
 export function OutreachSpotlight({
   locale,
-  eyebrow,
+  sectionEyebrow,
+  sectionTitle,
   title,
   quote,
   body,
 }: {
   locale: Locale;
-  eyebrow: string;
+  sectionEyebrow: string;
+  sectionTitle: string;
   title: string;
   quote: string;
   body: string;
@@ -82,20 +90,32 @@ export function OutreachSpotlight({
 
   return (
     <section
-      id="outreach"
+      id="news"
       className="scroll-mt-24 border-t border-line bg-mist/30 py-20 md:py-28"
-      aria-labelledby="outreach-title"
+      aria-labelledby="news-section-title"
     >
       <div className="mx-auto w-full max-w-7xl px-6">
+        <div className="mb-10 max-w-2xl md:mb-12">
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-teal">
+            {sectionEyebrow}
+          </p>
+          <h2
+            id="news-section-title"
+            className="font-display text-4xl text-ink md:text-5xl"
+          >
+            {sectionTitle}
+          </h2>
+        </div>
+
         <div className="grid items-stretch gap-0 overflow-hidden rounded-3xl border border-line bg-surface shadow-[0_8px_40px_rgba(20,32,51,0.06)] md:grid-cols-2">
-          <div className="relative min-h-[18rem] bg-[#0b1118] md:min-h-[24rem]">
+          <div className="relative min-h-[20rem] bg-[#0b1118] md:min-h-[26rem]">
             <Image
               key={slide.src}
               src={slide.src}
               alt={slide.alt[locale]}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center"
+              className={`object-cover ${slide.fit === "top" ? "object-top" : "object-center"}`}
               priority={index === 0}
             />
             <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-black/55 to-transparent px-4 pb-4 pt-10">
@@ -136,15 +156,9 @@ export function OutreachSpotlight({
           </div>
 
           <div className="flex flex-col justify-center px-8 py-10 md:px-12 md:py-14">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-teal">
-              {eyebrow}
-            </p>
-            <h2
-              id="outreach-title"
-              className="font-display text-3xl font-semibold tracking-[-0.03em] text-ink md:text-4xl"
-            >
+            <h3 className="font-display text-3xl font-semibold tracking-[-0.03em] text-ink md:text-4xl">
               {title}
-            </h2>
+            </h3>
             <p className="mt-5 font-display text-lg font-medium italic leading-snug text-ink/70 md:text-xl">
               {quote}
             </p>

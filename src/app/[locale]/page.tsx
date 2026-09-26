@@ -66,7 +66,8 @@ export default async function HomePage({
       />
       <OutreachSpotlight
         locale={locale}
-        eyebrow={t(dict, "home.outreachEyebrow")}
+        sectionEyebrow={t(dict, "home.outreachEyebrow")}
+        sectionTitle={t(dict, "home.outreachSectionTitle")}
         title={t(dict, "home.outreachTitle")}
         quote={t(dict, "home.outreachQuote")}
         body={t(dict, "home.outreachBody")}
