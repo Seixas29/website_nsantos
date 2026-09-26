@@ -1,6 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Sora, Source_Sans_3, IBM_Plex_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -13,25 +11,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "#0f1412" },
   ],
 };
-
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nsantos.vercel.app"),
@@ -60,25 +39,14 @@ export const metadata: Metadata = {
   },
 };
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem('ns-theme');if(t!=='light'&&t!=='dark'){t='light'}var r=document.documentElement;r.classList.toggle('dark',t==='dark');r.dataset.theme=t;r.style.colorScheme=t}catch(e){}})();`;
-
+/**
+ * Root layout is a passthrough so `[locale]/layout` can own `<html lang>`.
+ * @see https://next-intl.dev/docs/getting-started/app-router
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html
-      lang="en"
-      className={`${sourceSans.variable} ${sora.variable} ${plexMono.variable} h-full`}
-      suppressHydrationWarning
-    >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
-      <body className="min-h-full bg-paper font-sans text-ink antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  );
+  return children;
 }
