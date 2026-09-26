@@ -15,14 +15,6 @@ const SLIDES = [
     },
   },
   {
-    src: "/images/outreach/nei-duo-cage.png",
-    fit: "top" as const,
-    alt: {
-      en: "Eva Dias and Tomás Vieira at European Researchers’ Night 2026",
-      pt: "Eva Dias e Tomás Vieira na Noite Europeia dos Investigadores 2026",
-    },
-  },
-  {
     src: "/images/outreach/nei-demo.png",
     fit: "center" as const,
     alt: {
