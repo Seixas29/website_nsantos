@@ -70,8 +70,6 @@ export default async function HomePage({
         title={t(dict, "home.outreachTitle")}
         quote={t(dict, "home.outreachQuote")}
         body={t(dict, "home.outreachBody")}
-        ctaIg={t(dict, "home.outreachCtaIg")}
-        imageAlt={t(dict, "home.outreachAlt")}
       />
       <RecentHighlights
         locale={locale}
