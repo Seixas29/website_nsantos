@@ -2,6 +2,7 @@ import { ExploreCtaBand } from "@/components/sections/explore-cta-band";
 import { ExternalHubs } from "@/components/sections/external-hubs";
 import { FeaturedResearch } from "@/components/sections/featured-research";
 import { Hero } from "@/components/sections/hero";
+import { OutreachSpotlight } from "@/components/sections/outreach-spotlight";
 import { RecentHighlights } from "@/components/sections/recent-highlights";
 import { StatsBand } from "@/components/sections/stats-band";
 import { siteConfig } from "@/data/site";
@@ -62,6 +63,15 @@ export default async function HomePage({
         lead={t(dict, "home.hubsLead")}
         visitLabel={t(dict, "home.visitSite")}
         soonLabel={t(dict, "home.comingSoon")}
+      />
+      <OutreachSpotlight
+        locale={locale}
+        eyebrow={t(dict, "home.outreachEyebrow")}
+        title={t(dict, "home.outreachTitle")}
+        quote={t(dict, "home.outreachQuote")}
+        body={t(dict, "home.outreachBody")}
+        ctaIg={t(dict, "home.outreachCtaIg")}
+        imageAlt={t(dict, "home.outreachAlt")}
       />
       <RecentHighlights
         locale={locale}

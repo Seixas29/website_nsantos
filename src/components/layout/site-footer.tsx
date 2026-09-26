@@ -87,6 +87,16 @@ export function SiteFooter({
             <li>
               <OrcidLink tone="dark" />
             </li>
+            <li>
+              <a
+                href={siteConfig.social.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-teal-soft"
+              >
+                Instagram {siteConfig.social.instagram.handle}
+              </a>
+            </li>
             <li className="leading-relaxed">{siteConfig.address[locale]}</li>
           </ul>
         </div>

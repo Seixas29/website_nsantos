@@ -74,6 +74,10 @@ export const siteConfig = {
       id: "0000-0002-0580-0475",
       url: "https://orcid.org/0000-0002-0580-0475",
     },
+    instagram: {
+      handle: "@nunosantoslab",
+      url: "https://www.instagram.com/nunosantoslab/",
+    },
   },
 } as const;
 
